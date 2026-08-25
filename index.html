@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>HISYNC | HRMS, Asset &amp; Warehouse Management, Procurement and Operations Software — One Subscription, Complete Access</title>
 <meta name="description" content="HISYNC is the enterprise software suite from Hire Synchronization Private Limited — HISYNC People (HRMS &amp; payroll), AssetX (procurement, inventory, warehouse &amp; asset management) and Ordentra (business operations, sales &amp; point of sale). One subscription. Complete product access. No module-wise charges. Runs as your complete business system, or as a sub-system alongside your existing ERP and tools."/>
-<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="%230A101F"/><path d="M9 22V10M23 22V10M9 16h14" stroke="%2329C6D8" stroke-width="3" stroke-linecap="round"/></svg>'/>
+<link rel="icon" href="assets/brand/favicon.png" type="image/png"/>
+<link rel="apple-touch-icon" href="assets/brand/favicon.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet"/>
@@ -95,43 +96,92 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 .mobile-menu{display:none}
 
 /* ---------- hero ---------- */
-.hero{position:relative;background:var(--ink);color:var(--inv-1);padding:172px 0 96px;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.055) 1px,transparent 1px);background-size:30px 30px;mask-image:radial-gradient(ellipse 80% 70% at 50% 20%,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 20%,#000 30%,transparent 75%);pointer-events:none}
+.hero{position:relative;background:var(--ink);color:var(--inv-1);padding:118px 0 64px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.055) 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(ellipse 78% 64% at 42% 18%,#000 28%,transparent 78%);-webkit-mask-image:radial-gradient(ellipse 78% 64% at 42% 18%,#000 28%,transparent 78%);pointer-events:none}
+.hero-grain{position:absolute;inset:0;pointer-events:none;opacity:.045;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
 .glow{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none}
-.glow-a{width:560px;height:560px;background:rgba(43,91,240,.28);top:-220px;right:-120px}
-.glow-b{width:460px;height:460px;background:rgba(41,198,216,.14);bottom:-200px;left:-140px}
+.glow-a{width:620px;height:620px;background:rgba(43,91,240,.38);top:-160px;right:-40px}
+.glow-b{width:420px;height:420px;background:rgba(41,198,216,.16);bottom:8%;left:-140px}
+.glow-c{width:380px;height:380px;background:rgba(122,90,248,.16);top:120px;left:-120px}
 .hero .container{position:relative}
-.hero-eyebrow{font-family:var(--mono);font-size:.76rem;font-weight:500;letter-spacing:.42em;color:var(--cyan);text-transform:uppercase}
-.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.55rem,6vw,4.55rem);line-height:1.05;letter-spacing:-.025em;color:#fff;margin:22px 0 24px;max-width:900px}
-.hero h1 .grad{background:linear-gradient(92deg,#6E93FF,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero-lead{color:#A9B6D0;font-size:1.13rem;max-width:680px}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
-.usp-strip{display:inline-flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-top:30px;padding:11px 20px;border:1px solid rgba(255,255,255,.13);border-radius:999px;font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;color:#C6D1E6;background:rgba(255,255,255,.03)}
-.usp-strip i{width:4px;height:4px;border-radius:50%;background:var(--cyan);flex:none}
+.hero-eyebrow{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.34em;color:var(--cyan);text-transform:uppercase}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,5.4vw,4.2rem);line-height:1.06;letter-spacing:-.03em;color:#fff;margin:14px 0 16px;max-width:900px;text-wrap:balance}
+.hero h1 .grad{background:linear-gradient(92deg,#8AA8FF,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-lead{color:#B4C0D6;font-size:1.06rem;line-height:1.6;max-width:34rem}
+.hero-copy{padding-top:18px}
+.hero-clients{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;margin-top:22px}
+.hero-clients em{font-style:normal;font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:#7E8DAB;margin-right:4px}
+.hero-clients img{height:36px;width:auto;max-width:112px;object-fit:contain;background:#fff;border-radius:8px;padding:6px 10px}
+.hero-trust{list-style:none;display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1)}
+.hero-trust li{display:flex;align-items:center;gap:8px;font-size:.82rem;font-weight:500;color:#C3CDE0}
+.hero-trust li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 4px rgba(41,198,216,.14);flex:none}
+.hero-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 18px;margin-top:28px;padding:13px 22px;border:1px solid rgba(255,255,255,.1);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#D0D8EA}
+.hero-bar i{width:4px;height:4px;border-radius:50%;background:var(--cyan);flex:none}
+.hero-copy > *{animation:heroRise .75s cubic-bezier(.16,1,.3,1) both}
+.hero-copy > *:nth-child(1){animation-delay:.04s}
+.hero-copy > *:nth-child(2){animation-delay:.1s}
+.hero-copy > *:nth-child(3){animation-delay:.16s}
+.hero-copy > *:nth-child(4){animation-delay:.22s}
+.hero-copy > *:nth-child(5){animation-delay:.28s}
+.hero-copy > *:nth-child(6){animation-delay:.34s}
+@keyframes heroRise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 
 /* the sync thread — hero ecosystem panel */
-.eco-panel{margin-top:70px;border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:38px 36px 30px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015));backdrop-filter:blur(4px)}
+.eco-panel{margin-top:18px;border:1px solid rgba(255,255,255,.1);border-radius:22px;padding:28px 32px 24px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015));backdrop-filter:blur(4px)}
 .flow{display:flex;align-items:flex-start;gap:6px}
 .flow-node{display:flex;flex-direction:column;align-items:center;gap:12px;min-width:78px;flex:none}
 .flow-node i{width:12px;height:12px;border-radius:50%;background:var(--thread);box-shadow:0 0 0 5px rgba(41,198,216,.1),0 0 16px rgba(43,91,240,.6)}
 .flow-node span{font-family:var(--display);font-weight:600;font-size:.83rem;color:#D7E0F2;white-space:nowrap}
 .flow-link{flex:1;height:2px;margin-top:5px;min-width:18px;border-radius:2px;background:linear-gradient(90deg,rgba(43,91,240,.15),rgba(43,91,240,.75),rgba(41,198,216,.75),rgba(41,198,216,.15));background-size:220% 100%;animation:thread 5s linear infinite}
 @keyframes thread{to{background-position:-220% 0}}
-.eco-caption{font-family:var(--mono);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:#6E7C97;text-align:center;margin-top:30px}
+.eco-caption{font-family:var(--mono);font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:#8DA0C4;text-align:center;margin:0 0 18px}
 .hero-products{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
 .hp-card{border:1px solid rgba(255,255,255,.1);border-top:2px solid var(--acc,#fff);border-radius:var(--r-md);padding:17px 19px;background:rgba(255,255,255,.035);transition:background .18s ease}
 .hp-card:hover{background:rgba(255,255,255,.07)}
+.hp-logo{display:flex;align-items:center;justify-content:flex-start;background:#fff;border-radius:10px;padding:10px 12px;min-height:62px;margin-bottom:12px}
+.hp-logo img{height:42px;width:auto;max-width:100%;object-fit:contain}
 .hp-card b{font-family:var(--display);font-weight:700;color:#fff;font-size:.98rem;display:block}
 .hp-card span{color:#93A2BE;font-size:.82rem;line-height:1.45;display:block;margin-top:4px}
 
-/* ---------- ecosystem pillars ---------- */
-.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:58px}
-.pillar{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:24px;box-shadow:var(--shadow-card)}
-.pillar h3{font-family:var(--display);font-weight:700;font-size:1.02rem;display:flex;align-items:center;gap:9px}
-.pillar h3 i{width:8px;height:8px;border-radius:50%;background:var(--acc,var(--blue));flex:none}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
-.chip{font-size:.79rem;font-weight:500;color:var(--text-2);background:var(--mist);border:1px solid var(--line);padding:5px 11px;border-radius:999px;white-space:nowrap}
-.eco-close{margin-top:64px;text-align:center}
+/* ---------- ecosystem suite ---------- */
+.eco-split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px}
+.eco-pane{border-radius:18px;padding:22px 24px 20px;min-height:100%}
+.eco-pane-k{font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;display:block;margin-bottom:8px}
+.eco-pane p{font-size:.94rem;line-height:1.55;color:var(--text-2)}
+.eco-before{background:#fff;border:1px dashed #D5DCE8}
+.eco-before .eco-pane-k{color:#8A96AA}
+.eco-scatter{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.eco-scatter span{font-size:.78rem;color:#6B7890;background:var(--mist);border:1px solid var(--line);padding:5px 10px;border-radius:8px;opacity:.85}
+.eco-scatter span:nth-child(odd){transform:rotate(-1.2deg)}
+.eco-scatter span:nth-child(even){transform:rotate(1deg)}
+.eco-after{background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-card);position:relative;overflow:hidden}
+.eco-after::before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:var(--thread)}
+.eco-after .eco-pane-k{color:var(--blue)}
+.eco-thread{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:16px}
+.eco-thread b{font-family:var(--display);font-size:.8rem;font-weight:600;color:var(--text-1);background:var(--mist);border:1px solid var(--line);padding:6px 11px;border-radius:999px}
+.eco-thread i{width:18px;height:2px;background:var(--thread);border-radius:2px;flex:none}
+.eco-suite{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px;align-items:stretch}
+.eco-col{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:20px;padding:0 0 18px;box-shadow:var(--shadow-card);text-align:left;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;overflow:hidden;position:relative}
+.eco-col::before{content:"";display:block;height:4px;background:var(--acc,var(--blue))}
+.eco-col:hover{transform:translateY(-4px);box-shadow:0 18px 40px -18px rgba(16,24,40,.18);border-color:#D3DCEC}
+.eco-col-logo{margin:16px 18px 0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 12px;min-height:76px;display:grid;place-items:center;box-shadow:0 10px 28px -18px rgba(16,24,40,.35)}
+.eco-col-logo img{height:46px;width:auto;max-width:92%;object-fit:contain}
+.eco-col-body{padding:16px 20px 0;flex:1;display:flex;flex-direction:column}
+.eco-col-k{font-family:var(--mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--acc);font-weight:500}
+.eco-col h3{font-family:var(--display);font-weight:700;font-size:1.18rem;margin:6px 0 8px;letter-spacing:-.02em;color:var(--text-1);line-height:1.2}
+.eco-col-d{font-size:.9rem;color:var(--text-2);line-height:1.5;margin-bottom:14px}
+.eco-list{list-style:none;display:grid;gap:8px;margin-top:auto}
+.eco-list li{display:flex;align-items:flex-start;gap:9px;font-size:.9rem;color:var(--text-1);line-height:1.4}
+.eco-list li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px color-mix(in srgb,var(--acc) 14%,#fff);flex:none;margin-top:6px}
+.eco-col-cta{display:inline-flex;align-items:center;gap:6px;margin:16px 20px 0;font-family:var(--display);font-weight:600;font-size:.84rem;color:var(--acc)}
+.eco-finance{margin-top:18px;display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;background:var(--ink);color:#EDF2FB;border-radius:20px;padding:22px 28px;box-shadow:0 24px 50px -28px rgba(10,16,31,.55);position:relative}
+.eco-finance::before{content:"";position:absolute;left:28px;right:28px;top:-10px;height:10px;background:linear-gradient(90deg,#7A5AF8,#2B5BF0,#0FA38A,#29C6D8);border-radius:8px 8px 0 0;opacity:.9}
+.eco-fin-mark{width:48px;height:48px;background:#fff;border-radius:12px;padding:8px;object-fit:contain}
+.eco-finance b{font-family:var(--display);font-weight:700;font-size:1.05rem;display:block;margin-bottom:4px}
+.eco-finance p{font-size:.88rem;color:#A3B0C9;max-width:46rem;line-height:1.5}
+.eco-fin-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.eco-fin-tags span{font-size:.78rem;font-weight:600;color:#D7E0F2;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);padding:7px 12px;border-radius:999px}
+.eco-close{margin-top:48px;text-align:center}
 
 /* ---------- subscription band ---------- */
 .sub-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
@@ -151,7 +201,8 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 
 /* ---------- products ---------- */
 .tabs{display:inline-flex;gap:5px;background:var(--mist);border:1px solid var(--line);border-radius:999px;padding:5px;margin-top:44px}
-.tab{border:0;background:transparent;border-radius:999px;padding:11px 26px;font-family:var(--display);font-weight:600;font-size:.92rem;color:var(--text-2);transition:background .18s ease,color .18s ease}
+.tab{border:0;background:transparent;border-radius:999px;padding:11px 22px;font-family:var(--display);font-weight:600;font-size:.92rem;color:var(--text-2);transition:background .18s ease,color .18s ease;display:inline-flex;align-items:center;gap:8px}
+.tab img{width:20px;height:20px;object-fit:contain;flex:none}
 .tab:hover{color:var(--text-1)}
 .tab.active{background:var(--ink);color:#fff;box-shadow:0 6px 16px -6px rgba(10,16,31,.5)}
 .panel{display:none;margin-top:60px;grid-template-columns:.92fr 1.08fr;gap:60px;text-align:left}
@@ -161,6 +212,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 .panel[data-accent="violet"]{--acc:var(--violet)}
 .panel[data-accent="teal"]{--acc:var(--teal)}
 .prod-side{position:sticky;top:104px;align-self:start}
+.prod-logo{height:52px;width:auto;max-width:min(280px,100%);object-fit:contain;margin-bottom:18px}
 .prod-cat{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--acc)}
 .prod-name{font-family:var(--display);font-weight:800;font-size:clamp(1.7rem,2.8vw,2.3rem);letter-spacing:-.02em;margin:12px 0 16px}
 .prod-desc{color:var(--text-2);font-size:.99rem}
@@ -192,7 +244,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 /* ---------- accounting ---------- */
 .acct-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px}
 .acct-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:26px;box-shadow:var(--shadow-card)}
-.acct-card i{width:9px;height:9px;border-radius:50%;background:var(--acc,var(--blue));display:block;margin-bottom:15px}
+.acct-card img{width:42px;height:42px;object-fit:contain;margin-bottom:14px}
 .acct-card b{font-family:var(--display);font-weight:700;font-size:1.05rem;display:block;margin-bottom:8px}
 .acct-card p{color:var(--text-2);font-size:.92rem}
 .acct-close{margin-top:58px;text-align:center}
@@ -201,10 +253,8 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 .int-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px}
 .int-card{display:flex;gap:15px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:19px;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
 .int-card:hover{transform:translateY(-3px);border-color:#C9D6EE;box-shadow:var(--shadow-card)}
-.int-logo{width:46px;height:46px;border-radius:12px;flex:none;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:.86rem;color:#fff;letter-spacing:.02em}
-.int-a{background:linear-gradient(135deg,#2B5BF0,#1E44C8)}
-.int-b{background:linear-gradient(135deg,#7A5AF8,#5B3FE0)}
-.int-c{background:linear-gradient(135deg,#0FA38A,#0B7D6A)}
+.int-logo{width:48px;height:48px;border-radius:12px;flex:none;display:grid;place-items:center;background:#F6F8FC;border:1px solid var(--line);overflow:hidden;padding:7px}
+.int-logo img{width:100%;height:100%;object-fit:contain;display:block}
 .int-card b{font-family:var(--display);font-weight:600;font-size:.94rem;display:block}
 .int-card p{font-size:.83rem;color:var(--text-2);margin-top:3px}
 
@@ -218,12 +268,31 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 
 /* ---------- security ---------- */
 .badges{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:54px}
-.badge{border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:30px 20px;text-align:center;background:rgba(255,255,255,.035)}
-.badge svg{width:30px;height:30px;color:var(--cyan);margin:0 auto 14px}
-.badge b{font-family:var(--display);font-weight:700;font-size:1.02rem;color:#fff;display:block}
-.badge span{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#7C8AA6;display:block;margin-top:5px}
+.badge{border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:26px 22px 24px;text-align:left;background:rgba(255,255,255,.035);display:flex;flex-direction:column;min-height:100%}
+.cert-seal{width:72px;height:72px;border-radius:50%;border:1.5px solid currentColor;box-shadow:inset 0 0 0 5px rgba(255,255,255,.08);display:grid;place-content:center;text-align:center;line-height:1.05;margin-bottom:16px;color:#5FD4E2;flex:none}
+.badge-iso .cert-seal{color:#E0C07A;box-shadow:inset 0 0 0 5px rgba(224,192,122,.14)}
+.badge-soc .cert-seal{color:#7CA0FF;box-shadow:inset 0 0 0 5px rgba(124,160,255,.14)}
+.badge-dpdp .cert-seal{color:#5FD4E2;box-shadow:inset 0 0 0 5px rgba(95,212,226,.14)}
+.badge-gdpr .cert-seal{color:#B9C4DA;box-shadow:inset 0 0 0 5px rgba(185,196,218,.12)}
+.cert-seal i{font-style:normal;font-family:var(--mono);font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;display:block}
+.cert-seal b{font-family:var(--display);font-weight:700;font-size:.92rem;color:#fff;display:block;letter-spacing:.04em;margin:3px 0}
+.badge b.cert-name{font-family:var(--display);font-weight:700;font-size:1.02rem;color:#fff;display:block;line-height:1.3}
+.badge em{font-style:normal;font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:#E0C07A;display:block;margin:6px 0 10px}
+.badge-soc em{color:#7CA0FF}
+.badge-dpdp em{color:#5FD4E2}
+.badge-gdpr em{color:#9AA7BE}
+.badge p{font-size:.82rem;line-height:1.55;color:#A3B0C9;margin:0}
+.sec-arch{margin-top:48px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:rgba(7,12,24,.45);padding:8px 32px 4px}
+.sec-arch-h{font-family:var(--display);font-weight:700;font-size:1.12rem;color:#fff;padding:22px 0 6px}
+.sec-arch-h span{color:#5FD4E2}
+.sec-arch-sub{font-size:.86rem;color:#8DA0C4;padding-bottom:10px}
+.sec-row{display:grid;grid-template-columns:.85fr 1.35fr;gap:28px;padding:18px 0;border-top:1px solid rgba(255,255,255,.08)}
+.sec-row strong{font-family:var(--display);font-weight:600;font-size:.95rem;color:#EDF2FB;display:block;line-height:1.4}
+.sec-row p{font-size:.88rem;color:#93A2BE;line-height:1.6;margin:0}
 .controls{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:34px}
 .control-chip{font-size:.82rem;font-weight:500;color:#C4CFE4;border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.04);padding:8px 16px;border-radius:999px}
+.sec-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 22px;margin-top:36px;text-align:center}
+.sec-foot .footnote{margin:0}
 
 /* ---------- clients ---------- */
 .logo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:920px;margin:0 auto}
@@ -290,11 +359,12 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 .tm-card a{font-size:.72rem;font-weight:600;color:var(--blue,#2B5BF0);display:inline-block;margin-top:9px}
 
 /* ---------- hero visual: animated HISYNC console (v3) ---------- */
-.hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:52px;align-items:center}
-.hero-grid h1{font-size:clamp(2.35rem,4.1vw,3.55rem)}
-.hero-visual{position:relative}
-.dash{position:relative;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.11);border-radius:20px;padding:18px 18px 20px;backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);box-shadow:0 34px 90px -24px rgba(3,8,22,.85);animation:dashfloat 7s ease-in-out infinite alternate}
-@keyframes dashfloat{from{transform:translateY(0)}to{transform:translateY(-9px)}}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:36px 48px;align-items:start}
+.hero-grid h1{font-size:clamp(2.15rem,3.7vw,3.25rem);margin:12px 0 14px}
+.hero-visual{position:relative;padding:18px 8px 22px 0;animation:heroRise .9s .2s cubic-bezier(.16,1,.3,1) both}
+.hero-stage{perspective:1600px}
+.dash{position:relative;background:linear-gradient(180deg,rgba(18,28,52,.92),rgba(10,16,31,.96));border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:16px 16px 14px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 40px 90px -28px rgba(3,8,22,.9),inset 0 1px 0 rgba(255,255,255,.08);transform-origin:center 60%;animation:dashfloat 7s ease-in-out infinite alternate}
+@keyframes dashfloat{from{transform:rotateX(8deg) rotateY(-14deg) translateY(0)}to{transform:rotateX(8deg) rotateY(-14deg) translateY(-10px)}}
 .dtop{display:flex;align-items:center;gap:7px}
 .ddot{width:9px;height:9px;border-radius:50%}
 .ddot.r{background:#FF5F57}.ddot.y{background:#FEBB2E}.ddot.g{background:#28C840}
@@ -303,7 +373,8 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 .dlive i{width:7px;height:7px;border-radius:50%;background:#4ADE9C;animation:dpulse 1.7s infinite}
 @keyframes dpulse{0%,100%{box-shadow:0 0 0 0 rgba(74,222,156,.5)}55%{box-shadow:0 0 0 6px rgba(74,222,156,0)}}
 .dtabs{display:flex;gap:8px;margin-top:15px}
-.dtab{font-size:.72rem;font-weight:600;color:#9AA7BE;padding:6px 13px;border-radius:99px;border:1px solid rgba(255,255,255,.11);cursor:pointer;transition:color .25s ease,background .25s ease,border-color .25s ease;user-select:none}
+.dtab{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:600;color:#9AA7BE;padding:5px 12px;border-radius:99px;border:1px solid rgba(255,255,255,.11);cursor:pointer;transition:color .25s ease,background .25s ease,border-color .25s ease;user-select:none}
+.dtab img{width:14px;height:14px;object-fit:contain;border-radius:3px;background:#fff;padding:1px}
 .dtab.active{color:#fff;border-color:transparent;background:var(--dacc,#2B5BF0)}
 .dkpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
 .kpi{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:10px 12px;min-width:0}
@@ -332,40 +403,37 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 .run .jstep:nth-child(6) .jdot{animation:jlight .35s 3s ease forwards}
 @keyframes jlight{to{background:var(--dacc,#29C6D8);border-color:var(--dacc,#29C6D8);box-shadow:0 0 10px var(--dacc,#29C6D8)}}
 .jstep span{font-size:.55rem;font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;color:#7E8DAB;white-space:nowrap}
-.dfeed{margin-top:12px;display:grid;gap:8px}
+.dfeed{display:none}
 .frow{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:8px 12px;opacity:0;transform:translateY(7px);transition:opacity .4s ease,transform .4s ease}
 .frow.in{opacity:1;transform:none}
 .fic{width:20px;height:20px;border-radius:50%;flex:none;background:rgba(255,255,255,.08);color:var(--dacc,#29C6D8);display:grid;place-items:center;font-size:.68rem;font-weight:700}
 .frow b{font-size:.76rem;color:#DCE4F4;font-weight:600;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ftime{font-family:var(--mono);font-size:.58rem;color:#66748F;flex:none}
-.fchip{position:absolute;display:flex;align-items:center;gap:8px;background:#101B36;border:1px solid rgba(255,255,255,.13);border-radius:12px;padding:9px 14px;font-size:.73rem;font-weight:600;color:#DCE4F4;box-shadow:0 16px 44px rgba(3,8,22,.65);z-index:2}
+.fchip{position:absolute;display:flex;align-items:center;gap:8px;background:#101B36;border:1px solid rgba(255,255,255,.13);border-radius:12px;padding:9px 14px;font-size:.73rem;font-weight:600;color:#DCE4F4;box-shadow:0 16px 44px rgba(3,8,22,.65);z-index:2;pointer-events:none}
 .fchip svg{width:14px;height:14px;color:#4ADE9C;flex:none}
-.fchip.a{top:-15px;right:16px;animation:bob 5.5s ease-in-out infinite alternate}
-.fchip.b{bottom:-13px;left:2px;animation:bob 6.5s .9s ease-in-out infinite alternate}
+.fchip.a{top:4px;right:18px;animation:bob 5.5s ease-in-out infinite alternate}
+.fchip.b{bottom:2px;left:6px;animation:bob 6.5s .9s ease-in-out infinite alternate}
 @keyframes bob{from{transform:translateY(-4px)}to{transform:translateY(5px)}}
 @media (prefers-reduced-motion: reduce){
-  .dash,.fchip,.dlive i,.dline,.jprog,.jdot,.run .jprog,.run .jstep .jdot{animation:none !important}
+  .dash,.fchip,.dlive i,.dline,.jprog,.jdot,.run .jprog,.run .jstep .jdot,.hero-copy > *,.hero-visual{animation:none !important}
+  .dash{transform:none}
   .dline{stroke-dashoffset:0}
   .jprog{transform:scaleX(1)}
   .frow{opacity:1;transform:none}
 }
 
-/* ---------- logo, glance, badges, clients, about, contact-info, cookie (v2) ---------- */
-.brand-logo{height:30px;width:auto;display:block}
-.footer .brand-logo{height:32px}
-.hero-intro{margin-top:20px;font-size:.94rem;color:#8DA0C4;max-width:660px;line-height:1.65}
-.hero-intro b{color:#C6D2E8;font-weight:600}
+/* ---------- logo, glance, badges, clients, about, contact-info ---------- */
+.brand-logo{height:28px;width:auto;display:block}
+.footer .brand-logo{height:30px}
 .glance{background:var(--mist,#F2F5FA);border-bottom:1px solid var(--line,#E3E9F2);padding:38px 0}
 .glance-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
 .g-q{font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--blue,#2B5BF0);display:block;margin-bottom:9px}
 .glance-card p{font-size:.93rem;color:#43506A;line-height:1.65}
 .glance-card a{color:var(--blue,#2B5BF0);font-weight:600}
-.store-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-.store-btn{display:inline-flex;align-items:center;gap:9px;background:#0E1730;color:#fff !important;border-radius:11px;padding:8px 15px;line-height:1.12;border:1px solid #0E1730;transition:transform .15s ease,box-shadow .15s ease}
-.store-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(14,23,48,.22)}
-.store-btn svg{width:19px;height:19px;flex:none}
-.store-btn i{display:block;font-style:normal;font-size:.58rem;opacity:.72;letter-spacing:.05em}
-.store-btn b{display:block;font-size:.85rem;font-weight:700;letter-spacing:.01em}
+.store-links{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:18px}
+.store-btn{display:inline-flex;align-items:center;height:40px;padding:0;background:transparent;border:none;border-radius:8px;transition:transform .18s ease,opacity .18s ease}
+.store-btn:hover{transform:translateY(-2px);opacity:.88}
+.store-btn img{height:40px;width:auto;display:block}
 .client-card{background:#fff;border:1px solid var(--line,#E3E9F2);border-radius:var(--r-sm,14px);padding:30px 22px 24px;display:grid;justify-items:center;align-content:center;gap:16px;text-align:center;transition:transform .18s ease,box-shadow .18s ease}
 .client-card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(16,28,58,.09)}
 .client-card img{max-height:88px;max-width:78%;width:auto;object-fit:contain}
@@ -397,12 +465,6 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 .footer-contact{font-size:.82rem;color:#7C8AA6;margin-top:14px;line-height:1.7}
 .footer-contact a{color:#9AA7BE}
 .footer-contact a:hover{color:#fff}
-.cookie-bar{position:fixed;left:18px;bottom:18px;z-index:90;max-width:420px;background:#0E1730;border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px 20px;box-shadow:0 24px 60px rgba(4,10,26,.5);color:#C4CFE4}
-.cookie-bar p{font-size:.84rem;line-height:1.6;margin-bottom:14px}
-.cookie-bar a{color:#5FD4E2;font-weight:600}
-.cookie-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.ck-link{font-size:.8rem;color:#9AA7BE !important;font-weight:500 !important}
-
 /* ---------- footer ---------- */
 .footer{background:#070C18;color:#8593A8;padding:68px 0 36px;border-top:1px solid rgba(255,255,255,.06)}
 .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:44px}
@@ -420,8 +482,10 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 
 /* ---------- responsive ---------- */
 @media (max-width:1020px){
-  .pillars{grid-template-columns:repeat(2,1fr)}
   .why-grid,.int-grid,.acct-cards{grid-template-columns:repeat(2,1fr)}
+  .eco-split{grid-template-columns:1fr}
+  .eco-finance{grid-template-columns:1fr;text-align:left}
+  .eco-fin-tags{justify-content:flex-start}
   .badges{grid-template-columns:repeat(2,1fr)}
   .logo-grid{grid-template-columns:repeat(3,1fr)}
   .panel{grid-template-columns:1fr;gap:38px}
@@ -431,7 +495,10 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 }
 @media (max-width:760px){
   .section{padding:78px 0}
-  .hero{padding:138px 0 70px}
+  .hero{padding:108px 0 56px}
+  .hero-copy{padding-top:8px}
+  .hero-ctas{flex-direction:column;align-items:stretch}
+  .hero-ctas .btn{width:100%}
   .nav-links{display:none}
   .nav-toggle{display:block}
   .mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;z-index:59;background:rgba(10,16,31,.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08);padding:18px 4% 26px}
@@ -442,7 +509,9 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
   .flow-link{display:none}
   .flow-node{flex-direction:row;gap:9px;min-width:0;border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.05);padding:8px 14px;border-radius:999px}
   .hero-products{grid-template-columns:1fr}
-  .pillars,.why-grid,.int-grid,.acct-cards{grid-template-columns:1fr}
+  .fchip,.dfeed{display:none}
+  .why-grid,.int-grid,.acct-cards{grid-template-columns:1fr}
+  .eco-suite{grid-template-columns:1fr}
   .mods{grid-template-columns:1fr}
   .form-grid{grid-template-columns:1fr}
   .field{grid-column:1/-1}
@@ -450,8 +519,10 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
   .footer-grid{grid-template-columns:1fr}
   .tabs{width:100%;justify-content:space-between}
   .tab{padding:10px 14px;font-size:.82rem;flex:1}
-  .eco-panel{padding:26px 20px 22px}
-  .badges{grid-template-columns:1fr 1fr}
+  .eco-panel{padding:22px 16px 18px}
+  .badges{grid-template-columns:1fr}
+  .sec-arch{padding:8px 18px 4px}
+  .sec-row{grid-template-columns:1fr;gap:6px;padding:16px 0}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
@@ -459,8 +530,20 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
   .reveal{opacity:1;transform:none}
 }
 
-@media(max-width:1020px){.glance-grid{grid-template-columns:1fr}.founders{grid-template-columns:1fr}.hero-grid{grid-template-columns:1fr}.hero-visual{display:none}.fit-grid{grid-template-columns:1fr}}
-@media(max-width:760px){.cookie-bar{left:12px;right:12px;bottom:12px;max-width:none}.stats-row{gap:24px}.team-grid{grid-template-columns:repeat(2,1fr)}.tm-card{padding:16px 12px}}
+@media(max-width:1020px){
+  .glance-grid{grid-template-columns:1fr}
+  .founders{grid-template-columns:1fr}
+  .hero-grid{grid-template-columns:1fr;gap:28px}
+  .hero-visual{max-width:540px;margin:0 auto;padding:4px 0 8px}
+  .dash{animation:none;transform:none}
+  .fchip.a{top:auto;bottom:auto;right:12px;top:10px}
+  .fit-grid{grid-template-columns:1fr}
+}
+@media (max-height:820px) and (min-width:1021px){
+  .dfeed,.fchip{display:none}
+  .dchart svg{max-height:88px}
+}
+@media(max-width:760px){.stats-row{gap:24px}.team-grid{grid-template-columns:repeat(2,1fr)}.tm-card{padding:16px 12px}}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"HISYNC","legalName":"Hire Synchronization Private Limited","url":"https://hisync.in/","email":"info@hisync.in","telephone":"+91 98917 00140","foundingDate":"2024","sameAs":["https://www.linkedin.com/company/hisync"],"address":{"@type":"PostalAddress","streetAddress":"A-708, ATS Bouquet, Sector 132","addressLocality":"Noida","addressRegion":"Uttar Pradesh","postalCode":"201304","addressCountry":"IN"},"founder":[{"@type":"Person","name":"Rohit Gaur"},{"@type":"Person","name":"Amit S. Chauhan"},{"@type":"Person","name":"Ujjwal Agrawal"}]}
@@ -471,7 +554,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="#top" aria-label="HISYNC home">
-      <img class="brand-logo" src="data:image/png;base64,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" alt="HISYNC" width="391" height="84"/>
+      <img class="brand-logo" src="assets/brand/hisync-dark.png" alt="HISYNC" width="180" height="41"/>
     </a>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="#products">Products</a>
@@ -501,27 +584,37 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 <section class="hero" id="top">
   <div class="glow glow-a"></div>
   <div class="glow glow-b"></div>
+  <div class="glow glow-c"></div>
+  <div class="hero-grain" aria-hidden="true"></div>
   <div class="container">
     <div class="hero-grid">
     <div class="hero-copy">
-    <p class="hero-eyebrow">People &nbsp;•&nbsp; Operations &nbsp;•&nbsp; Finance</p>
+    <p class="hero-eyebrow">People · Operations · Finance</p>
     <h1>Run More of Your Business.<br/><span class="grad">Manage Less Complexity.</span></h1>
-    <p class="hero-lead">HISYNC brings people, procurement, inventory, warehouse, assets, CAPEX and OPEX projects, budgets, sales, point of sale and accounting together through one connected ERP ecosystem.</p>
+    <p class="hero-lead">One connected suite for HR &amp; payroll, procurement, warehouse, assets, sales and accounting — on a dedicated instance that is yours alone.</p>
     <div class="hero-ctas">
       <a href="#demo" class="btn btn-primary">Book a Free Demo
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
       <a href="#products" class="btn btn-ghost">Explore Our Products</a>
     </div>
-    <div class="usp-strip">
-      <span>One Subscription</span><i></i><span>Complete Product Access</span><i></i><span>No Module-Wise Charges</span>
+    <ul class="hero-trust">
+      <li>ISO 27001:2022 certified</li>
+      <li>Dedicated instance per customer</li>
+      <li>One subscription, every module</li>
+    </ul>
+    <div class="hero-clients">
+      <em>Trusted by</em>
+      <img src="assets/clients/blue-tokai.png" alt="Blue Tokai Coffee Roasters" width="120" height="36"/>
+      <img src="assets/clients/amama.png" alt="AMAMA Jewels" width="120" height="36"/>
+      <img src="assets/clients/jagruti.svg" alt="Jagruti Rehabilitation Centre" width="120" height="36"/>
     </div>
-    <p class="hero-intro">HISYNC is the enterprise software suite from <b>Hire Synchronization Private Limited</b> — built for enterprises, mid-market companies and growing businesses that want one connected system instead of many disconnected tools. Run HISYNC as your <b>complete system</b> — or plug any product in as a <b>sub-system</b> beside the tools you already use.</p>
     </div>
 
-    <div class="hero-visual reveal" aria-hidden="true">
-      <div class="fchip a"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Payroll processed on time</span></div>
-      <div class="fchip b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span>GRN &rarr; Capitalised &rarr; Verified</span></div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="fchip a" id="chipA"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Payroll processed on time</span></div>
+      <div class="fchip b" id="chipB"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Offer letter issued — HR-2189</span></div>
+      <div class="hero-stage">
       <div class="dash" id="heroDash">
         <div class="dtop">
           <span class="ddot r"></span><span class="ddot y"></span><span class="ddot g"></span>
@@ -529,11 +622,15 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
           <span class="dlive"><i></i>LIVE</span>
         </div>
         <div class="dtabs" id="dashTabs">
-          <span class="dtab active" data-prod="people">People</span>
-          <span class="dtab" data-prod="assetx">AssetX</span>
-          <span class="dtab" data-prod="ordentra">Ordentra</span>
+          <span class="dtab active" data-prod="people"><img src="assets/brand/people-mark.png" alt="" width="14" height="14"/> People</span>
+          <span class="dtab" data-prod="assetx"><img src="assets/brand/assetx-mark.png" alt="" width="14" height="14"/> AssetX</span>
+          <span class="dtab" data-prod="ordentra"><img src="assets/brand/ordentra-mark.png?v=2" alt="" width="14" height="14"/> Ordentra</span>
         </div>
-        <div class="dkpis" id="dashKpis"></div>
+        <div class="dkpis" id="dashKpis">
+          <div class="kpi"><span>Employees synced</span><b>1,284</b><i class="kd">▲ 3.2%</i></div>
+          <div class="kpi"><span>Attendance today</span><b>96.4%</b><i class="kd">▲ 1.1%</i></div>
+          <div class="kpi"><span>Payslips ready</span><b>1,236</b><i class="kd">on time</i></div>
+        </div>
         <div class="dchart">
           <svg viewBox="0 0 320 112" aria-hidden="true">
             <defs>
@@ -554,17 +651,33 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
           <div class="dchart-cap"><span id="dashCap">Payroll accuracy — trailing 12 months</span><span>Illustrative view</span></div>
         </div>
         <div class="jwrap" id="dashJourney">
-          <span class="jcap" id="dashJcap">Connected workflow</span>
+          <span class="jcap" id="dashJcap">Hire-to-payslip workflow</span>
           <div class="jsteps" id="dashSteps">
             <div class="jtrack"><i class="jprog"></i></div>
+            <div class="jstep"><span class="jdot"></span><span>Hire</span></div>
+            <div class="jstep"><span class="jdot"></span><span>Onboard</span></div>
+            <div class="jstep"><span class="jdot"></span><span>Attend</span></div>
+            <div class="jstep"><span class="jdot"></span><span>Payroll</span></div>
+            <div class="jstep"><span class="jdot"></span><span>Payslip</span></div>
           </div>
         </div>
-        <div class="dfeed" id="dashFeed"></div>
+        <div class="dfeed" id="dashFeed">
+          <div class="frow in"><span class="fic">✓</span><b>Offer letter issued — HR-2189</b><span class="ftime">just now</span></div>
+          <div class="frow in"><span class="fic">✓</span><b>Shift roster published — Plant 2</b><span class="ftime">2m</span></div>
+        </div>
+      </div>
       </div>
     </div>
     </div>
 
-    <div class="eco-panel reveal">
+    <div class="hero-bar">
+      <span>One Subscription</span><i></i>
+      <span>Complete Product Access</span><i></i>
+      <span>No Module-Wise Charges</span>
+    </div>
+
+    <div class="eco-panel">
+      <p class="eco-caption">The HISYNC Ecosystem — three products, one thread</p>
       <div class="flow" aria-label="The HISYNC ecosystem flow">
         <div class="flow-node"><i></i><span>People</span></div>
         <div class="flow-link"></div>
@@ -580,17 +693,19 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
         <div class="flow-link"></div>
         <div class="flow-node"><i></i><span>Accounting</span></div>
       </div>
-      <p class="eco-caption">The HISYNC Ecosystem</p>
       <div class="hero-products">
         <a class="hp-card" style="--acc:#7A5AF8" href="#products" data-tab-link="people">
+          <span class="hp-logo"><img src="assets/brand/people.png" alt="HISYNC People" width="220" height="75"/></span>
           <b>HISYNC People</b>
           <span>HR, Payroll &amp; Workforce Management</span>
         </a>
         <a class="hp-card" style="--acc:#2B5BF0" href="#products" data-tab-link="assetx">
+          <span class="hp-logo"><img src="assets/brand/assetx.png" alt="AssetX by HISYNC" width="220" height="73"/></span>
           <b>AssetX</b>
           <span>Procurement, Inventory, Warehouse, Assets, CAPEX Projects &amp; Budgets</span>
         </a>
         <a class="hp-card" style="--acc:#0FA38A" href="#products" data-tab-link="ordentra">
+          <span class="hp-logo"><img src="assets/brand/ordentra.png?v=2" alt="Ordentra by HISYNC" width="220" height="66"/></span>
           <b>Ordentra</b>
           <span>Business Operations, OPEX Projects, Budgets, Sales &amp; Point of Sale</span>
         </a>
@@ -625,49 +740,87 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
     <div class="center reveal">
       <span class="kicker">The Ecosystem</span>
       <h2>Everything Your Business Needs to Stay in Sync.</h2>
-      <p class="lead">Businesses often rely on multiple disconnected tools to manage people, procurement, inventory, assets, projects, sales and finance. HISYNC brings these important operations together through connected products, workflows, integrations and accounting capabilities.</p>
+      <p class="lead">Most companies run people, warehouse, sales and finance in separate tools. HISYNC replaces that scatter with three connected products — and accounting that sits on the same thread.</p>
     </div>
-    <div class="pillars">
-      <div class="pillar reveal" style="--acc:#7A5AF8">
-        <h3><i></i>People &amp; HR</h3>
-        <div class="chips">
-          <span class="chip">Recruitment &amp; Onboarding</span>
-          <span class="chip">Attendance &amp; Workforce</span>
-          <span class="chip">Payroll</span>
-          <span class="chip">Compliance</span>
+
+    <div class="eco-split reveal">
+      <div class="eco-pane eco-before">
+        <span class="eco-pane-k">The usual stack</span>
+        <p>HR in one system. Warehouse in another. POS at the counter. Assets in a spreadsheet. Finance closes the month by stitching them together.</p>
+        <div class="eco-scatter" aria-hidden="true">
+          <span>HRMS</span><span>Payroll vendor</span><span>WMS</span><span>Asset register</span><span>POS</span><span>Excel for books</span>
         </div>
       </div>
-      <div class="pillar reveal" style="--acc:#2B5BF0">
-        <h3><i></i>Procurement &amp; Assets</h3>
-        <div class="chips">
-          <span class="chip">Procurement</span>
-          <span class="chip">Vendor Management</span>
-          <span class="chip">Inventory</span>
-          <span class="chip">Warehouse Management</span>
-          <span class="chip">Fixed Assets</span>
-          <span class="chip">Maintenance</span>
-          <span class="chip">CAPEX Projects &amp; Budgets</span>
-        </div>
-      </div>
-      <div class="pillar reveal" style="--acc:#0FA38A">
-        <h3><i></i>Operations &amp; Sales</h3>
-        <div class="chips">
-          <span class="chip">OPEX Projects &amp; Budgets</span>
-          <span class="chip">Customer Management</span>
-          <span class="chip">Product Management</span>
-          <span class="chip">Sales</span>
-          <span class="chip">Point of Sale</span>
-        </div>
-      </div>
-      <div class="pillar reveal" style="--acc:#29C6D8">
-        <h3><i></i>Finance</h3>
-        <div class="chips">
-          <span class="chip">Invoicing</span>
-          <span class="chip">Payments</span>
-          <span class="chip">Accounting</span>
+      <div class="eco-pane eco-after">
+        <span class="eco-pane-k">The HISYNC thread</span>
+        <p>Hire someone, buy an asset, stock a warehouse, take an order, post the books — without re-keying between systems.</p>
+        <div class="eco-thread" aria-hidden="true">
+          <b>People</b><i></i><b>AssetX</b><i></i><b>Ordentra</b><i></i><b>Books</b>
         </div>
       </div>
     </div>
+
+    <div class="eco-suite">
+      <a class="eco-col reveal" style="--acc:#7A5AF8" href="#products" data-tab-link="people">
+        <span class="eco-col-logo"><img src="assets/brand/people.png" alt="" width="220" height="75"/></span>
+        <div class="eco-col-body">
+          <span class="eco-col-k">People &amp; HR</span>
+          <h3>HISYNC People</h3>
+          <p class="eco-col-d">Workforce, attendance, payroll and compliance on one product — including the HISYNC People mobile app.</p>
+          <ul class="eco-list">
+            <li>Recruitment &amp; onboarding</li>
+            <li>Attendance &amp; workforce</li>
+            <li>Payroll</li>
+            <li>Statutory compliance</li>
+          </ul>
+        </div>
+        <span class="eco-col-cta">Explore People →</span>
+      </a>
+      <a class="eco-col reveal" style="--acc:#2B5BF0" href="#products" data-tab-link="assetx">
+        <span class="eco-col-logo"><img src="assets/brand/assetx.png" alt="" width="220" height="73"/></span>
+        <div class="eco-col-body">
+          <span class="eco-col-k">Procurement &amp; assets</span>
+          <h3>AssetX</h3>
+          <p class="eco-col-d">From purchase requisition to capitalised asset — warehouse, vendors and CAPEX on one register.</p>
+          <ul class="eco-list">
+            <li>Procurement &amp; vendor management</li>
+            <li>Inventory &amp; warehouse</li>
+            <li>Fixed assets &amp; maintenance</li>
+            <li>CAPEX projects &amp; budgets</li>
+          </ul>
+        </div>
+        <span class="eco-col-cta">Explore AssetX →</span>
+      </a>
+      <a class="eco-col reveal" style="--acc:#0FA38A" href="#products" data-tab-link="ordentra">
+        <span class="eco-col-logo"><img src="assets/brand/ordentra.png?v=2" alt="" width="220" height="66"/></span>
+        <div class="eco-col-body">
+          <span class="eco-col-k">Operations &amp; sales</span>
+          <h3>Ordentra</h3>
+          <p class="eco-col-d">Customers, inventory for sale, POS, delivery and OPEX — order through to collection.</p>
+          <ul class="eco-list">
+            <li>Customer &amp; product masters</li>
+            <li>Sales &amp; point of sale</li>
+            <li>Delivery &amp; invoicing</li>
+            <li>OPEX projects &amp; budgets</li>
+          </ul>
+        </div>
+        <span class="eco-col-cta">Explore Ordentra →</span>
+      </a>
+    </div>
+
+    <div class="eco-finance reveal">
+      <img class="eco-fin-mark" src="assets/brand/hisync-mark.png" alt="" width="48" height="48"/>
+      <div>
+        <b>Finance is not a fourth product. It runs through all three.</b>
+        <p>Invoicing, payments and accounting post from People, AssetX and Ordentra — so the floor, the counter and the books stay on the same thread.</p>
+      </div>
+      <div class="eco-fin-tags">
+        <span>Invoicing</span>
+        <span>Payments</span>
+        <span>Accounting</span>
+      </div>
+    </div>
+
     <div class="eco-close reveal">
       <p class="statement">Start with What You Need. Use Everything Your Product Has to Offer.</p>
     </div>
@@ -758,15 +911,16 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
       <h2>Three Powerful Products. One Connected Ecosystem.</h2>
       <p class="lead">Each product gives you the complete experience for its business area — explore the capabilities below.</p>
       <div class="tabs" role="tablist" aria-label="HISYNC products">
-        <button class="tab active" role="tab" aria-selected="true" data-tab="people" id="tab-people">HISYNC People</button>
-        <button class="tab" role="tab" aria-selected="false" data-tab="assetx" id="tab-assetx">AssetX</button>
-        <button class="tab" role="tab" aria-selected="false" data-tab="ordentra" id="tab-ordentra">Ordentra</button>
+        <button class="tab active" role="tab" aria-selected="true" data-tab="people" id="tab-people"><img src="assets/brand/people-mark.png" alt="" width="20" height="20"/>HISYNC People</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="assetx" id="tab-assetx"><img src="assets/brand/assetx-mark.png" alt="" width="20" height="20"/>AssetX</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="ordentra" id="tab-ordentra"><img src="assets/brand/ordentra-mark.png?v=2" alt="" width="20" height="20"/>Ordentra</button>
       </div>
     </div>
 
     <!-- HISYNC PEOPLE -->
     <div class="panel active" data-accent="violet" data-panel="people" role="tabpanel" aria-labelledby="tab-people">
       <div class="prod-side">
+        <img class="prod-logo" src="assets/brand/people.png" alt="HISYNC People" width="220" height="75"/>
         <p class="prod-cat">HR, Payroll &amp; Workforce Management</p>
         <h3 class="prod-name">HISYNC People</h3>
         <p class="prod-desc">HISYNC People helps organisations manage the complete employee lifecycle — from recruitment and onboarding to attendance, payroll, performance, compliance and separation. Designed for HR teams, employees and business leaders, the platform brings workforce operations into one connected system.</p>
@@ -775,7 +929,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>
           <span>One subscription gives you access to the complete available HISYNC People product experience. No separate module-wise charges.</span>
         </div>
-        <div class="store-links" aria-label="HISYNC People mobile apps"><a class="store-btn" href="https://apps.apple.com/in/app/hisync-people/id6769443610" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.6 12.9c0-2 1.6-3 1.7-3.1-1-1.4-2.4-1.6-2.9-1.6-1.2-.1-2.4.7-3 .7-.6 0-1.6-.7-2.6-.7-1.3 0-2.6.8-3.3 2-1.4 2.4-.4 6 1 8 .7 1 1.5 2.1 2.5 2 1-.1 1.4-.6 2.6-.6 1.2 0 1.5.6 2.6.6 1.1 0 1.8-1 2.4-2 .8-1.1 1.1-2.2 1.1-2.3-.1 0-2.1-.8-2.1-3zM13.9 6.6c.5-.7.9-1.6.8-2.6-.8 0-1.8.6-2.3 1.2-.5.6-1 1.6-.8 2.5.9.1 1.8-.4 2.3-1.1z"/></svg><span><i>Download on the</i><b>App Store</b></span></a><a class="store-btn" href="https://play.google.com/store/apps/details?id=in.hisync.people" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 3.9v16.2c0 .6.7 1 1.2.7l14-8.1c.5-.3.5-1.1 0-1.4l-14-8.1c-.5-.3-1.2.1-1.2.7z"/></svg><span><i>Get it on</i><b>Google Play</b></span></a></div>
+        <div class="store-links" aria-label="HISYNC People mobile apps"><a class="store-btn" href="https://apps.apple.com/in/app/hisync-people/id6769443610" target="_blank" rel="noopener" aria-label="Download HISYNC People on the App Store"><img src="assets/badges/app-store.svg" alt="Download on the App Store" width="120" height="40"/></a><a class="store-btn" href="https://play.google.com/store/apps/details?id=in.hisync.people" target="_blank" rel="noopener" aria-label="Get HISYNC People on Google Play"><img src="assets/badges/google-play.svg" alt="Get it on Google Play" width="135" height="40"/></a></div>
       </div>
       <div>
         <div class="acc-list" data-acc-list="people"></div>
@@ -786,6 +940,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
     <!-- ASSETX -->
     <div class="panel" data-accent="blue" data-panel="assetx" role="tabpanel" aria-labelledby="tab-assetx" hidden>
       <div class="prod-side">
+        <img class="prod-logo" src="assets/brand/assetx.png" alt="AssetX by HISYNC" width="220" height="73"/>
         <p class="prod-cat">Procurement, Inventory, Warehouse, Assets, CAPEX Projects &amp; Budgets</p>
         <h3 class="prod-name">AssetX</h3>
         <p class="prod-desc">AssetX helps organisations manage the complete journey of procurement, vendors, inventory, warehouse operations and fixed assets, along with capital projects and CAPEX budgets. From raising a purchase requisition to vendor onboarding, purchasing, receiving, warehousing, inventory movement, project-based procurement, CWIP, asset capitalisation, depreciation, physical verification, maintenance, payments and disposal — AssetX provides visibility and control across the complete lifecycle.</p>
@@ -794,7 +949,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>
           <span>One subscription gives you access to the complete available AssetX product experience. No separate charges for individual modules.</span>
         </div>
-        <div class="store-links" aria-label="AssetX mobile apps"><a class="store-btn" href="https://apps.apple.com/in/app/assetx/id6752773944" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.6 12.9c0-2 1.6-3 1.7-3.1-1-1.4-2.4-1.6-2.9-1.6-1.2-.1-2.4.7-3 .7-.6 0-1.6-.7-2.6-.7-1.3 0-2.6.8-3.3 2-1.4 2.4-.4 6 1 8 .7 1 1.5 2.1 2.5 2 1-.1 1.4-.6 2.6-.6 1.2 0 1.5.6 2.6.6 1.1 0 1.8-1 2.4-2 .8-1.1 1.1-2.2 1.1-2.3-.1 0-2.1-.8-2.1-3zM13.9 6.6c.5-.7.9-1.6.8-2.6-.8 0-1.8.6-2.3 1.2-.5.6-1 1.6-.8 2.5.9.1 1.8-.4 2.3-1.1z"/></svg><span><i>Download on the</i><b>App Store</b></span></a><a class="store-btn" href="https://play.google.com/store/apps/details?id=com.hire.sync" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 3.9v16.2c0 .6.7 1 1.2.7l14-8.1c.5-.3.5-1.1 0-1.4l-14-8.1c-.5-.3-1.2.1-1.2.7z"/></svg><span><i>Get it on</i><b>Google Play</b></span></a></div>
+        <div class="store-links" aria-label="AssetX mobile apps"><a class="store-btn" href="https://apps.apple.com/in/app/assetx/id6752773944" target="_blank" rel="noopener" aria-label="Download AssetX on the App Store"><img src="assets/badges/app-store.svg" alt="Download on the App Store" width="120" height="40"/></a><a class="store-btn" href="https://play.google.com/store/apps/details?id=com.hire.sync" target="_blank" rel="noopener" aria-label="Get AssetX on Google Play"><img src="assets/badges/google-play.svg" alt="Get it on Google Play" width="135" height="40"/></a></div>
       </div>
       <div>
         <div class="acc-list" data-acc-list="assetx"></div>
@@ -805,6 +960,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
     <!-- ORDENTRA -->
     <div class="panel" data-accent="teal" data-panel="ordentra" role="tabpanel" aria-labelledby="tab-ordentra" hidden>
       <div class="prod-side">
+        <img class="prod-logo" src="assets/brand/ordentra.png?v=2" alt="Ordentra by HISYNC" width="220" height="66"/>
         <p class="prod-cat">Business Operations, OPEX Projects, Budgets, Sales &amp; Point of Sale</p>
         <h3 class="prod-name">Ordentra</h3>
         <p class="prod-desc">Ordentra helps businesses manage customers, product information, operational projects, OPEX budgets, sales, point-of-sale (POS) billing, delivery, invoicing, payments and accounting through connected workflows.</p>
@@ -832,15 +988,15 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
     </div>
     <div class="acct-cards">
       <div class="acct-card reveal" style="--acc:#7A5AF8">
-        <i></i><b>HISYNC People</b>
+        <img src="assets/brand/people-mark.png" alt="" width="42" height="42"/><b>HISYNC People</b>
         <p>Workforce, payroll and employee-related accounting capabilities.</p>
       </div>
       <div class="acct-card reveal" style="--acc:#2B5BF0">
-        <i></i><b>AssetX</b>
+        <img src="assets/brand/assetx-mark.png" alt="" width="42" height="42"/><b>AssetX</b>
         <p>Procurement, vendor invoicing, payments, fixed asset accounting, CAPEX and operational transactions.</p>
       </div>
       <div class="acct-card reveal" style="--acc:#0FA38A">
-        <i></i><b>Ordentra</b>
+        <img src="assets/brand/ordentra-mark.png?v=2" alt="" width="42" height="42"/><b>Ordentra</b>
         <p>Sales, point of sale, invoicing, payments, OPEX-related transactions and connected business accounting.</p>
       </div>
     </div>
@@ -859,17 +1015,17 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
       <p class="lead">Ready-to-use integrations let HISYNC run as a sub-system beside your existing ERP and tools — or as the system itself. Connect the platforms your business already relies on.</p>
     </div>
     <div class="int-grid">
-      <div class="int-card reveal"><span class="int-logo int-a">M365</span><div><b>Microsoft 365 Directory</b><p>Employee and directory-related workflows.</p></div></div>
-      <div class="int-card reveal"><span class="int-logo int-b">GD</span><div><b>Google Employee Directory</b><p>Connect employee and organisational information.</p></div></div>
-      <div class="int-card reveal"><span class="int-logo int-c">NS</span><div><b>Oracle NetSuite</b><p>Ready-to-use ERP integration capabilities.</p></div></div>
-      <div class="int-card reveal"><span class="int-logo int-b">EWB</span><div><b>E-Way Bill</b><p>Integration for relevant E-Way Bill workflows.</p></div></div>
-      <div class="int-card reveal"><span class="int-logo int-c">EI</span><div><b>E-Invoicing</b><p>Integration for relevant e-invoicing processes.</p></div></div>
-      <div class="int-card reveal"><span class="int-logo int-a">eT</span><div><b>eTimeOffice</b><p>Biometric and attendance integration.</p></div></div>
-      <div class="int-card reveal"><span class="int-logo int-c">RZP</span><div><b>Razorpay</b><p>Integration for relevant payment workflows.</p></div></div>
-      <div class="int-card reveal"><span class="int-logo int-a">SH</span><div><b>Shopify</b><p>Business and sales workflow integration.</p></div></div>
-      <div class="int-card reveal"><span class="int-logo int-b">KYB</span><div><b>KYB Verification Suite</b><p>Business and vendor verification workflows.</p></div></div>
+      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/microsoft-365.svg" alt="" width="48" height="48"/></span><div><b>Microsoft 365 Directory</b><p>Employee and directory-related workflows.</p></div></div>
+      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/google.svg" alt="" width="48" height="48"/></span><div><b>Google Employee Directory</b><p>Connect employee and organisational information.</p></div></div>
+      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/netsuite.svg" alt="" width="48" height="48"/></span><div><b>Oracle NetSuite</b><p>Ready-to-use ERP integration capabilities.</p></div></div>
+      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/eway-bill.png" alt="" width="48" height="48"/></span><div><b>E-Way Bill</b><p>Integration for relevant E-Way Bill workflows.</p></div></div>
+      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/e-invoice.png" alt="" width="48" height="48"/></span><div><b>E-Invoicing</b><p>Integration for relevant e-invoicing processes.</p></div></div>
+      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/etimeoffice.png" alt="" width="48" height="48"/></span><div><b>eTimeOffice</b><p>Biometric and attendance integration.</p></div></div>
+      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/razorpay.svg" alt="" width="48" height="48"/></span><div><b>Razorpay</b><p>Integration for relevant payment workflows.</p></div></div>
+      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/shopify.svg" alt="" width="48" height="48"/></span><div><b>Shopify</b><p>Business and sales workflow integration.</p></div></div>
+      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/kyb.svg" alt="" width="48" height="48"/></span><div><b>KYB Verification Suite</b><p>Business and vendor verification workflows.</p></div></div>
     </div>
-    <p class="footnote center" style="text-align:center">Less Manual Work. Better Connected Systems. &nbsp;·&nbsp; Monograms shown as placeholders — replace with approved partner logos.</p>
+    <p class="footnote center" style="text-align:center">Less Manual Work. Better Connected Systems.</p>
   </div>
 </section>
 
@@ -935,27 +1091,61 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
   <div class="container">
     <div class="center reveal">
       <span class="kicker">Security, Compliance &amp; Trust</span>
-      <h2>Enterprise-Grade Security. Built for Trust.</h2>
-      <p class="lead">Your business data is critical. HISYNC is built with a strong focus on security, governance and compliance.</p>
+      <h2>Your auditors will ask. Here are the answers.</h2>
+      <p class="lead">HISYNC runs payroll, asset and procurement data for Indian enterprises — on a dedicated instance per customer. This section is written for the people who have to sign off on that.</p>
     </div>
     <div class="badges">
-      <div class="badge reveal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.4-2.9 7.4-7 9-4.1-1.6-7-4.6-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
-        <b>ISO 27001:2022</b><span>Certified ISMS</span>
+      <div class="badge badge-iso reveal">
+        <span class="cert-seal" aria-hidden="true"><i>ISO 27001</i><b>2022</b><i>Certified</i></span>
+        <b class="cert-name">ISO 27001:2022</b>
+        <em>Certified ISMS</em>
+        <p>Certified by Ranalysis Certification Pvt. Ltd. (EGAC-accredited). Certificate 4DAFE675, valid to 14 May 2029.</p>
       </div>
-      <div class="badge reveal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.4-2.9 7.4-7 9-4.1-1.6-7-4.6-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
-        <b>SOC 1 + SOC 2</b><span>Assessed — 2026</span>
+      <div class="badge badge-soc reveal">
+        <span class="cert-seal" aria-hidden="true"><i>SOC 1 + 2</i><b>2026</b><i>Assessed</i></span>
+        <b class="cert-name">SOC 1 &amp; SOC 2</b>
+        <em>Framework assessed</em>
+        <p>Control-framework assessments by UK Certification &amp; Inspection Ltd (2026) — not a CPA attestation. A CPA-firm SOC 2 program is underway.</p>
       </div>
-      <div class="badge reveal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.4-2.9 7.4-7 9-4.1-1.6-7-4.6-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
-        <b>DPDP Act 2023</b><span>Privacy Built-In</span>
+      <div class="badge badge-dpdp reveal">
+        <span class="cert-seal" aria-hidden="true"><i>DPDP</i><b>2023</b><i>Built-in</i></span>
+        <b class="cert-name">DPDP Act 2023</b>
+        <em>Privacy in the product</em>
+        <p>PAN, Aadhaar, UAN and bank details encrypted at rest. Every decryption is logged. Data-subject requests and breach workflows ship in the product.</p>
       </div>
-      <div class="badge reveal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.4-2.9 7.4-7 9-4.1-1.6-7-4.6-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
-        <b>GDPR</b><span>Aligned</span>
+      <div class="badge badge-gdpr reveal">
+        <span class="cert-seal" aria-hidden="true"><i>GDPR</i><b>EU</b><i>Aligned</i></span>
+        <b class="cert-name">GDPR</b>
+        <em>Aligned, not a seal</em>
+        <p>Where EU personal data is processed, access, correction and erasure rights apply. This is alignment with the regulation — not a third-party GDPR certificate.</p>
       </div>
     </div>
+
+    <div class="sec-arch reveal">
+      <p class="sec-arch-h">One customer, <span>one instance.</span></p>
+      <p class="sec-arch-sub">The controls below are product behaviour, not a policy PDF.</p>
+      <div class="sec-row">
+        <strong>Dedicated single-tenant deployment</strong>
+        <p>Each customer runs an isolated application with its own database and domain. No shared schema, no pooled tenancy, no cross-customer query path.</p>
+      </div>
+      <div class="sec-row">
+        <strong>Encryption where it matters</strong>
+        <p>PAN, Aadhaar, UAN and bank details are encrypted at rest with blind-index lookup, hidden from default API output, and every decryption is logged.</p>
+      </div>
+      <div class="sec-row">
+        <strong>Tamper-evident by design</strong>
+        <p>Approvals write to a SHA-256 hash chain. Depreciation ledgers are HMAC-signed. Tampering is detectable, not just discouraged.</p>
+      </div>
+      <div class="sec-row">
+        <strong>Segregation of duties, enforced</strong>
+        <p>Payroll maker, checker and disburser are separate roles. A database constraint blocks self-approval. Break-glass overrides need a second officer and expire on a timer.</p>
+      </div>
+      <div class="sec-row">
+        <strong>Access control &amp; SSO</strong>
+        <p>Role-based access across permission modules, field-level security, and SSO via Microsoft Entra ID and Google (OAuth/OIDC) with directory sync.</p>
+      </div>
+    </div>
+
     <div class="controls reveal">
       <span class="control-chip">Enterprise Audit Logs</span>
       <span class="control-chip">Role-Based Access</span>
@@ -963,7 +1153,10 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
       <span class="control-chip">Maker-Checker Enablement</span>
       <span class="control-chip">Controlled Operational Workflows</span>
     </div>
-    <p class="footnote" style="text-align:center">Certificate numbers available on request.</p>
+    <div class="sec-foot">
+      <p class="footnote">ISO certificate 4DAFE675 available on request. Security questionnaires: <a href="mailto:info@hisync.in" style="color:#5FD4E2">info@hisync.in</a></p>
+      <a class="btn btn-ghost btn-sm" href="#demo">Bring your questionnaire to a demo</a>
+    </div>
   </div>
 </section>
 
@@ -1182,7 +1375,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
     <div class="footer-grid">
       <div>
         <a class="brand" href="#top">
-          <img class="brand-logo" src="data:image/png;base64,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" alt="HISYNC" width="391" height="84"/>
+          <img class="brand-logo" src="assets/brand/hisync-dark.png" alt="HISYNC" width="180" height="41"/>
         </a>
         <p class="footer-tag">One connected ecosystem for people, operations and finance — by Hire Synchronization Private Limited.</p>
         <p class="footer-contact">A-708, ATS Bouquet, Sector 132, Noida, UP 201304, India<br/>
@@ -1217,7 +1410,6 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
           <li><a href="privacy-policy.html">Privacy Policy</a></li>
           <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
           <li><a href="cookie-policy.html">Cookie Policy</a></li>
-          <li><a href="cookie-settings.html">Cookie Settings</a></li>
         </ul>
       </div>
     </div>
@@ -1227,16 +1419,6 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
     </div>
   </div>
 </footer>
-
-<!-- ================= COOKIE CONSENT ================= -->
-<div class="cookie-bar" id="cookieBar" role="dialog" aria-label="Cookie consent" hidden>
-  <p>We use cookies to run this site and — with your consent — to understand traffic and improve your experience. See our <a href="cookie-policy.html">Cookie Policy</a>.</p>
-  <div class="cookie-actions">
-    <button type="button" class="btn btn-primary btn-sm" id="ckAccept">Accept all</button>
-    <button type="button" class="btn btn-ghost btn-sm" id="ckReject">Necessary only</button>
-    <a class="ck-link" href="cookie-settings.html">Cookie settings</a>
-  </div>
-</div>
 
 <script>
 /* ============================================================
@@ -1516,7 +1698,8 @@ demoForm.addEventListener("submit", function(e){
       jcap:"Hire-to-payslip workflow",
       kpis:[{l:"Employees synced", v:1284, s:"", d:"▲ 3.2%"},{l:"Attendance today", v:96.4, s:"%", d:"▲ 1.1%"},{l:"Payslips ready", v:1236, s:"", d:"on time"}],
       steps:["Hire","Onboard","Attend","Payroll","Payslip"],
-      feed:[["Offer letter issued — HR-2189","just now"],["Shift roster published — Plant 2","2m"],["Payroll run completed — Aug","9m"]]
+      feed:[["Offer letter issued — HR-2189","just now"],["Shift roster published — Plant 2","2m"]],
+      chips:["Payroll processed on time","Offer letter issued — HR-2189"]
     },
     assetx: {
       acc:"#2B5BF0",
@@ -1524,7 +1707,8 @@ demoForm.addEventListener("submit", function(e){
       jcap:"Procure-to-capitalise workflow",
       kpis:[{l:"Open POs", v:342, s:"", d:"▲ 6.4%"},{l:"GRNs this week", v:128, s:"", d:"▲ 2.8%"},{l:"Assets verified", v:98.2, s:"%", d:"▲ 0.6%"}],
       steps:["PR","PO","GRN","Capitalise","Verify"],
-      feed:[["PO-1042 approved — WH-03","just now"],["GRN posted — Store WH-03","4m"],["Asset tagged &amp; verified — L2","11m"]]
+      feed:[["PO-1042 approved — WH-03","just now"],["GRN posted — Store WH-03","4m"]],
+      chips:["GRN → Capitalised → Verified","PO-1042 approved — WH-03"]
     },
     ordentra: {
       acc:"#0FA38A",
@@ -1532,7 +1716,8 @@ demoForm.addEventListener("submit", function(e){
       jcap:"Order-to-collection workflow",
       kpis:[{l:"Orders today", v:214, s:"", d:"▲ 4.9%"},{l:"POS bills", v:1032, s:"", d:"▲ 7.3%"},{l:"Collections", v:94.7, s:"%", d:"▲ 1.4%"}],
       steps:["Order","POS","Deliver","Invoice","Collect"],
-      feed:[["POS bill #8317 generated","just now"],["Delivery challan issued — DC-77","3m"],["Payment received — INV-2210","12m"]]
+      feed:[["POS bill #8317 generated","just now"],["Payment received — INV-2210","12m"]],
+      chips:["POS bill #8317 generated","Payment received — INV-2210"]
     }
   };
   var ORDER = ["people","assetx","ordentra"];
@@ -1542,6 +1727,8 @@ demoForm.addEventListener("submit", function(e){
   var capEl = document.getElementById("dashCap");
   var jcapEl = document.getElementById("dashJcap");
   var journeyEl = document.getElementById("dashJourney");
+  var chipA = document.querySelector("#chipA span");
+  var chipB = document.querySelector("#chipB span");
   var tabs = document.querySelectorAll("#dashTabs .dtab");
   var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -1558,18 +1745,24 @@ demoForm.addEventListener("submit", function(e){
     requestAnimationFrame(step);
   }
 
-  function render(key){
+  var idx = 0, timer = null;
+  function render(key, animate){
     var d = DATA[key];
     dash.style.setProperty("--dacc", d.acc);
     tabs.forEach(function(t){ t.classList.toggle("active", t.dataset.prod === key); });
     if(capEl) capEl.textContent = d.cap;
     if(jcapEl) jcapEl.textContent = d.jcap;
+    if(chipA && d.chips) chipA.textContent = d.chips[0];
+    if(chipB && d.chips) chipB.textContent = d.chips[1];
 
     kpisEl.innerHTML = d.kpis.map(function(k){
-      return '<div class="kpi"><span>' + k.l + '</span><b>0</b><i class="kd">' + k.d + '</i></div>';
+      var start = animate ? "0" : ((k.v % 1 ? k.v.toFixed(1) : fmt(k.v)) + k.s);
+      return '<div class="kpi"><span>' + k.l + '</span><b>' + start + '</b><i class="kd">' + k.d + '</i></div>';
     }).join("");
-    var vals = kpisEl.querySelectorAll("b");
-    d.kpis.forEach(function(k, i){ countTo(vals[i], k.v, k.s); });
+    if(animate){
+      var vals = kpisEl.querySelectorAll("b");
+      d.kpis.forEach(function(k, i){ countTo(vals[i], k.v, k.s); });
+    }
 
     stepsEl.innerHTML = '<div class="jtrack"><i class="jprog"></i></div>' + d.steps.map(function(s){
       return '<div class="jstep"><span class="jdot"></span><span>' + s + '</span></div>';
@@ -1588,47 +1781,21 @@ demoForm.addEventListener("submit", function(e){
     });
   }
 
-  var idx = 0, timer = null;
-  function next(){ idx = (idx + 1) % ORDER.length; render(ORDER[idx]); }
+  function next(){ idx = (idx + 1) % ORDER.length; render(ORDER[idx], true); }
   function start(){ if(!reduced && !timer){ timer = setInterval(next, 5200); } }
   function stop(){ if(timer){ clearInterval(timer); timer = null; } }
 
-  render(ORDER[0]);
+  render(ORDER[0], false);
   start();
   dash.addEventListener("mouseenter", stop);
   dash.addEventListener("mouseleave", start);
   tabs.forEach(function(t){
     t.addEventListener("click", function(){
       idx = ORDER.indexOf(t.dataset.prod);
-      render(t.dataset.prod);
+      render(t.dataset.prod, true);
       stop(); start();
     });
   });
-})();
-
-/* ---------- cookie consent (defensive storage; preferences kept 180 days) ---------- */
-var CK_KEY = "hisyncConsent";
-function ckGet(){
-  try{
-    var v = localStorage.getItem(CK_KEY);
-    if(!v) return null;
-    var o = JSON.parse(v);
-    if(o && o.ts && (Date.now() - o.ts) > 180*24*60*60*1000){ localStorage.removeItem(CK_KEY); return null; }
-    return o;
-  }catch(err){ return null; }
-}
-function ckSet(o){
-  o.ts = Date.now();
-  try{ localStorage.setItem(CK_KEY, JSON.stringify(o)); }catch(err){}
-}
-(function(){
-  var bar = document.getElementById("cookieBar");
-  if(!bar) return;
-  if(!ckGet()){ bar.hidden = false; }
-  var accept = document.getElementById("ckAccept");
-  var reject = document.getElementById("ckReject");
-  if(accept) accept.addEventListener("click", function(){ ckSet({necessary:true, analytics:true, marketing:true}); bar.hidden = true; });
-  if(reject) reject.addEventListener("click", function(){ ckSet({necessary:true, analytics:false, marketing:false}); bar.hidden = true; });
 })();
 </script>
 </body>
