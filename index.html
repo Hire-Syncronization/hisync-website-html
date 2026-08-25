@@ -95,16 +95,24 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 .section.dark{background:var(--midnight);color:var(--inv-1)}
 
 /* ---------- buttons ---------- */
-.btn{touch-action:manipulation;display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:13px 26px;font-family:var(--display);font-weight:600;font-size:.93rem;letter-spacing:.01em;border:1px solid transparent;transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease}
+.btn{touch-action:manipulation;display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:13px 26px;font-family:var(--display);font-weight:600;font-size:.93rem;letter-spacing:.01em;border:1px solid transparent;transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease,color .18s ease}
 .btn svg{width:16px;height:16px}
-.btn-primary{background:var(--blue);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 12px 28px -14px rgba(43,91,240,.75)}
-.btn-primary:hover{transform:translateY(-1px);background:var(--blue-deep);box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 16px 32px -12px rgba(43,91,240,.65)}
-.btn-ghost{border-color:rgba(255,255,255,.16);color:var(--inv-1);background:rgba(255,255,255,.03)}
+.btn-primary{position:relative;gap:12px;padding:5px 5px 5px 18px;color:#fff;background:linear-gradient(180deg,#3B6BFA,#244FE0);border-color:rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.28)}
+.btn-go{width:34px;height:34px;border-radius:50%;flex:none;display:grid;place-items:center;background:#fff;color:#1E44C8;transition:transform .18s ease}
+.btn-go svg{width:15px;height:15px}
+.btn-primary:hover{transform:none;background:linear-gradient(180deg,#4A78FF,#1E44C8);box-shadow:inset 0 1px 0 rgba(255,255,255,.3)}
+.btn-primary:hover .btn-go{transform:translateX(2px)}
+.btn-primary:active{transform:scale(.985)}
+.btn-ghost{border-color:rgba(255,255,255,.16);color:var(--inv-1);background:rgba(255,255,255,.03);padding:12px 22px}
 .btn-ghost:hover{background:rgba(255,255,255,.07)}
 .btn-ghost-light{border-color:var(--line);color:var(--text-1);background:#fff}
 .btn-ghost-light:hover{border-color:var(--blue);color:var(--blue)}
 .btn-sm{padding:9px 19px;font-size:.85rem}
-.btn-block{width:100%}
+.btn-sm.btn-primary{padding:3px 3px 3px 14px;font-size:.82rem}
+.btn-sm .btn-go{width:28px;height:28px}
+.btn-sm .btn-go svg{width:13px;height:13px}
+.btn-block{width:100%;justify-content:space-between}
+.btn-block .btn-go{margin-left:auto}
 
 /* ---------- header ---------- */
 .site-header{position:fixed;inset:0 0 auto 0;z-index:60;background:rgba(5,7,13,.94);border-bottom:1px solid rgba(255,255,255,.07);transform:translateZ(0)}
@@ -135,6 +143,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 .hero h1 .grad{color:#9EB4D6;background:none;-webkit-text-fill-color:unset;font-weight:700}
 .hero-lead{color:#B4C0D6;font-size:1.06rem;line-height:1.6;max-width:34rem}
 .hero-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:22px}
+.hero-ctas .btn-ghost{min-height:44px}
 .hero-copy{padding-top:18px}
 .hero-clients{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;margin-top:22px}
 .hero-clients em{font-style:normal;font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:#7E8DAB;margin-right:4px}
@@ -625,7 +634,7 @@ html.is-paused .dlive i{animation-play-state:paused}
   .mobile-menu.open{display:flex;flex-direction:column}
   .mobile-menu > a{display:block;padding:14px 6px;color:#D7E0F2;font-family:var(--display);font-weight:600;font-size:1.02rem;border-bottom:1px solid rgba(255,255,255,.08)}
   .mobile-cta-wrap{flex:none;padding:22px 0 4px}
-  .mobile-cta-wrap .btn{display:flex;justify-content:center;align-items:center;width:100%;padding:14px 20px;text-align:center;box-sizing:border-box}
+  .mobile-cta-wrap .btn{display:flex;justify-content:space-between;align-items:center;width:100%;padding:5px 5px 5px 18px;text-align:center;box-sizing:border-box}
 }
 @media (max-width:760px){
   .section{padding:78px 0}
@@ -635,6 +644,7 @@ html.is-paused .dlive i{animation-play-state:paused}
   .hero-copy{padding-top:8px}
   .hero-ctas{flex-direction:column;align-items:stretch;gap:12px}
   .hero-ctas .btn{width:100%}
+  .hero-ctas .btn-primary{justify-content:space-between}
   .hero-ctas .btn:hover{transform:none}
   .flow{flex-wrap:wrap;justify-content:center;gap:12px 16px;padding-top:8px}
   .flow::before{display:none}
@@ -678,6 +688,7 @@ html.is-paused .dlive i{animation-play-state:paused}
   .btn:hover,.eco-col:hover,.int-card:hover,.tm-card:hover,.fit-card:hover,.hp-card:hover,.client-card:hover,.hero-visual:hover .dash{
     transform:none;
   }
+  .btn-primary:hover .btn-go{transform:none}
 }
 @media (max-width:1020px){
   html{scroll-behavior:auto}
@@ -1008,7 +1019,7 @@ html.is-paused .dlive i{animation-play-state:paused}
       <a href="#why">Why HISYNC</a>
       <a href="#security">Security</a>
       <a href="#about">About</a>
-      <a href="#demo" class="btn btn-primary btn-sm nav-cta">Book a Free Demo</a>
+      <a href="#demo" class="btn btn-primary btn-sm nav-cta">Book a Free Demo<span class="btn-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -1023,7 +1034,7 @@ html.is-paused .dlive i{animation-play-state:paused}
   <a href="#security">Security</a>
   <a href="#about">About</a>
   <div class="mobile-cta-wrap">
-    <a href="#demo" class="btn btn-primary">Book a Free Demo</a>
+    <a href="#demo" class="btn btn-primary">Book a Free Demo<span class="btn-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
   </div>
 </div>
 
@@ -1051,9 +1062,7 @@ html.is-paused .dlive i{animation-play-state:paused}
     <h1>Run More of Your Business.<br/><span class="grad">Manage Less Complexity.</span></h1>
     <p class="hero-lead">One connected suite for HR &amp; payroll, procurement, warehouse, assets, sales and accounting — on a dedicated instance that is yours alone.</p>
     <div class="hero-ctas">
-      <a href="#demo" class="btn btn-primary">Book a Free Demo
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
+      <a href="#demo" class="btn btn-primary">Book a Free Demo<span class="btn-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
       <a href="#products" class="btn btn-ghost">Explore Our Products</a>
     </div>
     <ul class="hero-trust">
@@ -1388,7 +1397,7 @@ html.is-paused .dlive i{animation-play-state:paused}
       <div class="ledger-void">
         <span>Not on the invoice</span>
         <b>Per-module SKUs</b>
-        <b>Feature unlocks</b>
+        <b>Unlocks</b>
         <b>Add-on packs</b>
       </div>
     </div>
@@ -1902,7 +1911,7 @@ html.is-paused .dlive i{animation-play-state:paused}
             <div id="hisync-recaptcha" class="g-recaptcha"></div>
           </div>
           <p class="form-error" id="formError" role="alert"></p>
-          <div class="field full" style="margin-top:14px"><button type="submit" class="btn btn-primary btn-block" id="demoSubmit">Book Your Free Demo</button></div>
+          <div class="field full" style="margin-top:14px"><button type="submit" class="btn btn-primary btn-block" id="demoSubmit"><span class="btn-label">Book Your Free Demo</span><span class="btn-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button></div>
           <p class="form-note">By sending this you agree we may contact you about a HISYNC demo. See our <a href="privacy-policy.html">privacy policy</a>.</p>
         </form>
         <div class="form-success" id="formSuccess">
@@ -1926,7 +1935,7 @@ html.is-paused .dlive i{animation-play-state:paused}
         <p class="footer-close-p">People, AssetX or Ordentra — one subscription per product. We reply within one business day.</p>
       </div>
       <div class="footer-close-acts">
-        <a href="#demo" class="btn btn-primary">Book a Free Demo</a>
+        <a href="#demo" class="btn btn-primary">Book a Free Demo<span class="btn-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
         <a href="mailto:info@hisync.in" class="btn btn-ghost">Email info@hisync.in</a>
       </div>
     </div>
@@ -2190,6 +2199,11 @@ var RECAPTCHA_SITE_KEY = "6LcdSz0sAAAAAMGT696yLzurQ099leQTJ-mcn7Jd";
 var demoForm = document.getElementById("demoForm");
 var demoSubmit = document.getElementById("demoSubmit");
 var formError = document.getElementById("formError");
+function setDemoSubmitLabel(text){
+  var label = demoSubmit && demoSubmit.querySelector(".btn-label");
+  if(label) label.textContent = text;
+  else if(demoSubmit) demoSubmit.textContent = text;
+}
 var recaptchaWidgetId = null;
 var recaptchaLoadPromise = null;
 
@@ -2392,7 +2406,7 @@ demoForm.addEventListener("submit", function(e){
   };
 
   demoSubmit.disabled = true;
-  demoSubmit.textContent = "Sending…";
+  setDemoSubmitLabel("Sending…");
 
   fetch(LEADS_URL, {
     method: "POST",
@@ -2414,12 +2428,12 @@ demoForm.addEventListener("submit", function(e){
     showFormError(result.message);
     resetCaptcha();
     demoSubmit.disabled = false;
-    demoSubmit.textContent = "Book Your Free Demo";
+    setDemoSubmitLabel("Book Your Free Demo");
   }).catch(function(){
     showFormError("A network error occurred. Please check your connection and try again.");
     resetCaptcha();
     demoSubmit.disabled = false;
-    demoSubmit.textContent = "Book Your Free Demo";
+    setDemoSubmitLabel("Book Your Free Demo");
   });
 });
 
