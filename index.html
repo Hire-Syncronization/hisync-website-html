@@ -218,21 +218,48 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 .eco-fin-tags span{font-size:.78rem;font-weight:600;color:#D7E0F2;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);padding:7px 12px;border-radius:999px}
 .eco-close{margin-top:48px;text-align:center}
 
-/* ---------- subscription band ---------- */
-.sub-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
-.checks{list-style:none;margin-top:26px;display:grid;gap:13px}
-.checks li{display:flex;gap:12px;align-items:flex-start;color:#C4CFE4;font-size:.97rem}
-.checks svg{width:19px;height:19px;flex:none;color:var(--cyan);margin-top:3px}
-.steps{display:flex;flex-direction:column}
-.step{display:flex;align-items:center;gap:18px;border:1px solid rgba(255,255,255,.11);border-radius:var(--r-md);padding:19px 22px;background:rgba(255,255,255,.045)}
-.step-num{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;color:var(--cyan);width:64px;flex:none}
-.step b{font-family:var(--display);font-weight:600;font-size:1rem;color:#fff;display:block}
-.step span{color:#93A2BE;font-size:.84rem}
-.step-link{width:2px;height:26px;margin-left:44px;background:linear-gradient(180deg,rgba(43,91,240,.2),rgba(41,198,216,.8),rgba(43,91,240,.2));background-size:100% 220%;animation:thread-v 4s linear infinite}
-@keyframes thread-v{to{background-position:0 -220%}}
-.keyplate{margin-top:76px;text-align:center;border:1px solid rgba(255,255,255,.11);border-radius:20px;padding:44px 30px;background:radial-gradient(ellipse 60% 120% at 50% 0%,rgba(43,91,240,.16),transparent 70%)}
-.keyplate .statement{font-size:clamp(1.5rem,3vw,2.3rem)}
-.keyplate p{color:#93A2BE;margin-top:12px;font-size:.96rem}
+/* ---------- subscription / commercial ledger ---------- */
+.sub-band{position:relative;isolation:isolate;overflow:hidden;background:#05070d;color:var(--inv-1)}
+.sub-band.section.dark{background:#05070d}
+.sub-band::after{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;z-index:1;pointer-events:none;background:var(--thread)}
+.sub-rules{position:absolute;inset:0;z-index:0;pointer-events:none;background-image:repeating-linear-gradient(to bottom,transparent 0 47px,rgba(210,225,255,.055) 47px 48px),repeating-linear-gradient(to right,transparent 0 119px,rgba(210,225,255,.028) 119px 120px);mask-image:radial-gradient(ellipse 85% 70% at 50% 42%,#000 20%,transparent 78%);-webkit-mask-image:radial-gradient(ellipse 85% 70% at 50% 42%,#000 20%,transparent 78%)}
+.sub-gutter{position:absolute;top:0;bottom:0;left:42%;width:1px;z-index:0;pointer-events:none;background:linear-gradient(180deg,transparent,rgba(41,198,216,.22) 18%,rgba(43,91,240,.18) 72%,transparent)}
+.sub-watermark{position:absolute;right:-2%;top:8%;z-index:0;margin:0;font-family:var(--display);font-weight:800;font-size:clamp(7rem,18vw,14rem);line-height:.8;letter-spacing:-.08em;color:rgba(237,242,251,.035);pointer-events:none;user-select:none}
+.sub-band .container{position:relative;z-index:1}
+.sub-head{max-width:40rem;margin-bottom:48px}
+.sub-head h2{margin-bottom:14px;text-wrap:wrap;overflow-wrap:break-word}
+.sub-head .grad{color:#9EB4D6;font-weight:700}
+.ledger{border:1px solid rgba(210,225,255,.12);border-radius:18px;background:linear-gradient(180deg,#0c121c 0%,#070b12 100%);box-shadow:0 1px 0 rgba(255,255,255,.05) inset,0 40px 80px -48px rgba(0,0,0,.85);overflow:hidden}
+.ledger-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;align-items:center;padding:13px 22px;border-bottom:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.02)}
+.ledger-dots{display:flex;gap:6px;margin-right:4px}
+.ledger-dots i{width:8px;height:8px;border-radius:50%}
+.ledger-dots .r{background:#FF5F57}.ledger-dots .y{background:#FEBB2E}.ledger-dots .g{background:#28C840}
+.ledger-head span{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#8FA3C2}
+.ledger-brand{display:inline-flex;align-items:center;gap:10px;color:#8FA3C2}
+.ledger-head .ledger-live{color:#6EE7B7}
+.ledger-split{display:grid;grid-template-columns:.9fr 1.1fr}
+.ledger-was,.ledger-is{padding:26px 24px 22px}
+.ledger-was{border-right:1px solid rgba(255,255,255,.07);background:rgba(0,0,0,.18)}
+.ledger-pane-k{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;margin:0 0 16px}
+.ledger-was .ledger-pane-k{color:#7A879C}
+.ledger-is .ledger-pane-k{color:var(--cyan)}
+.ledger-skus{list-style:none;display:grid;gap:0}
+.ledger-skus li{display:grid;grid-template-columns:52px 1fr auto;gap:10px;align-items:center;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.05);color:#6B7890;font-size:.9rem}
+.ledger-skus li:last-child{border-bottom:0}
+.ledger-skus i{font-family:var(--mono);font-style:normal;font-size:.58rem;letter-spacing:.14em;color:#4E5A70}
+.ledger-skus s{text-decoration:line-through;text-decoration-color:#5A6578;color:#8A96AA}
+.ledger-skus em{font-family:var(--mono);font-style:normal;font-size:.62rem;letter-spacing:.08em;color:#5C6A85}
+.ledger-rows{display:grid;gap:10px}
+.ledger-row{display:grid;grid-template-columns:36px 1fr auto;gap:12px;align-items:center;padding:12px 14px;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:rgba(255,255,255,.03);border-left:3px solid var(--acc,#2B5BF0);transition:background .15s ease,border-color .15s ease}
+.ledger-row:hover{background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.16);color:inherit}
+.ledger-row img{width:36px;height:36px;object-fit:contain;background:#fff;border-radius:8px;padding:5px}
+.ledger-row b{display:block;font-family:var(--display);font-weight:700;font-size:.95rem;color:#F4F7FC;letter-spacing:-.015em}
+.ledger-row small{display:block;margin-top:3px;font-size:.75rem;color:#8FA0B8;line-height:1.35}
+.ledger-row strong{font-family:var(--mono);font-size:.58rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--acc,#29C6D8);white-space:nowrap}
+.ledger-note{margin:16px 2px 0;font-size:.84rem;color:#9AA7BE;line-height:1.5}
+.ledger-void{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;padding:14px 22px 16px;border-top:1px solid rgba(255,255,255,.07);background:rgba(0,0,0,.2)}
+.ledger-void span{font-family:var(--mono);font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:#6E7C97;margin-right:6px}
+.ledger-void b{font-size:.78rem;font-weight:500;color:#C3CDE0;border:1px solid rgba(255,255,255,.1);padding:5px 10px;border-radius:999px;text-decoration:line-through;text-decoration-color:#5C6A85}
 
 /* ---------- products ---------- */
 .tabs{display:inline-flex;gap:5px;background:var(--mist);border:1px solid var(--line);border-radius:999px;padding:5px;margin-top:44px}
@@ -559,7 +586,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 .footer-reach a:hover{color:#fff}
 .footer-reach svg{width:15px;height:15px;flex:none;color:var(--cyan);margin-top:3px}
 .footer-bottom{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,255,.07);display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between;font-size:.78rem;color:#6E7C97}
-.footer-meta{color:#8B98B0;max-width:42ch;line-height:1.5}
+.footer-meta{color:#8B98B0;line-height:1.5}
 .footer-top{display:inline-flex;align-items:center;gap:6px;color:#C3CDE0;font-size:.8rem;font-weight:600;border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:7px 13px}
 .footer-top:hover{color:#fff;border-color:rgba(255,255,255,.28)}
 .footer-top svg{width:12px;height:12px}
@@ -568,8 +595,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 .reveal{opacity:0;transition:opacity .5s ease}
 .reveal.in{opacity:1}
 html.is-paused .hero-thread path.hero-thread-run,
-html.is-paused .dlive i,
-html.is-paused .step-link{animation-play-state:paused}
+html.is-paused .dlive i{animation-play-state:paused}
 @media (min-width:1021px){
   .section:not(#products):not(#demo),.footer{content-visibility:auto;contain-intrinsic-size:auto 1400px}
 }
@@ -584,7 +610,10 @@ html.is-paused .step-link{animation-play-state:paused}
   .logo-grid{grid-template-columns:repeat(3,1fr)}
   .panel{grid-template-columns:1fr;gap:38px}
   .prod-side{position:static}
-  .sub-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
+  .ledger-split{grid-template-columns:1fr}
+  .ledger-was{border-right:0;border-bottom:1px solid rgba(255,255,255,.07)}
+  .sub-gutter,.sub-watermark{display:none}
   .footer-grid{grid-template-columns:1fr 1fr}
   .footer-brand{grid-column:1/-1;max-width:520px}
   .footer-close{grid-template-columns:1fr;padding:22px 20px 22px 24px}
@@ -626,6 +655,13 @@ html.is-paused .step-link{animation-play-state:paused}
   .footer-close-acts{flex-direction:column;align-items:stretch}
   .footer-close-acts .btn{width:100%;justify-content:center}
   .footer-bottom{flex-direction:column;align-items:flex-start}
+  .sub-head h2{font-size:1.62rem;line-height:1.2}
+  .ledger-row{grid-template-columns:36px 1fr}
+  .ledger-row strong{grid-column:2;justify-self:start}
+  .ledger-was,.ledger-is{padding:20px 16px}
+  .ledger-head,.ledger-void{padding-left:16px;padding-right:16px}
+  .ledger-live{display:none}
+  .ledger-note{max-width:none}
   .tabs{width:100%;justify-content:space-between}
   .tab{padding:10px 14px;font-size:.82rem;flex:1}
   .eco-panel{padding:22px 16px 18px}
@@ -657,7 +693,7 @@ html.is-paused .step-link{animation-play-state:paused}
   .dash{transform:none;transition:none;box-shadow:0 18px 40px -28px rgba(0,0,0,.75)}
   .hero-visual:hover .dash{transform:none}
   .dline,.ddotmove{filter:none;animation:none}
-  .dlive i,.step-link,.hero-thread path.hero-thread-run{animation:none}
+  .dlive i,.hero-thread path.hero-thread-run{animation:none}
   .reveal{opacity:1;transform:none;transition:none}
   .section,.footer{content-visibility:auto;contain-intrinsic-size:auto 680px}
 }
@@ -1301,43 +1337,60 @@ html.is-paused .step-link{animation-play-state:paused}
 </section>
 
 <!-- ================= ONE SUBSCRIPTION ================= -->
-<section class="section dark" id="subscription">
+<section class="section dark sub-band" id="subscription">
+  <div class="sub-rules" aria-hidden="true"></div>
+  <div class="sub-gutter" aria-hidden="true"></div>
+  <p class="sub-watermark" aria-hidden="true">01</p>
   <div class="container">
-    <div class="sub-grid">
-      <div class="reveal">
-        <span class="kicker">A HISYNC Differentiator</span>
-        <h2>No Module-Wise Pricing. No Feature Unlocking.</h2>
-        <p class="lead">With HISYNC, you don't have to purchase every module separately or unlock features one at a time. When you subscribe to a HISYNC product, you get access to its complete available set of modules and features under a single subscription.</p>
-        <ul class="checks">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>No separate charges for individual modules</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>No complicated module-wise pricing</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>No need to unlock features one by one</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Access the complete available product ecosystem</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Use the capabilities your business needs as you grow</li>
-        </ul>
+    <header class="sub-head reveal">
+      <span class="kicker">Commercial</span>
+      <h2>No module catalogue.<br/><span class="grad">One subscription per product.</span></h2>
+      <p class="lead">Subscribe to HISYNC People, AssetX or Ordentra. That product&rsquo;s modules and features are included — not sold as add-ons, not gated behind unlocks.</p>
+    </header>
+    <div class="ledger reveal">
+      <div class="ledger-head">
+        <span class="ledger-brand"><span class="ledger-dots" aria-hidden="true"><i class="r"></i><i class="y"></i><i class="g"></i></span> HISYNC · Tariff</span>
+        <span class="ledger-live">One line item</span>
       </div>
-      <div class="reveal">
-        <div class="steps">
-          <div class="step">
-            <span class="step-num">STEP 01</span>
-            <div><b>One Product</b><span>Choose the HISYNC product that fits your business requirements</span></div>
+      <div class="ledger-split">
+        <div class="ledger-was">
+          <p class="ledger-pane-k">How most software is sold</p>
+          <ol class="ledger-skus">
+            <li><i>01</i><s>Core pack</s><em>SKU</em></li>
+            <li><i>02</i><s>Attendance add-on</s><em>SKU</em></li>
+            <li><i>03</i><s>Payroll engine</s><em>SKU</em></li>
+            <li><i>04</i><s>Mobile unlock</s><em>SKU</em></li>
+            <li><i>05</i><s>Next module, next invoice</s><em>SKU</em></li>
+          </ol>
+        </div>
+        <div class="ledger-is">
+          <p class="ledger-pane-k">How HISYNC is sold</p>
+          <div class="ledger-rows">
+            <a class="ledger-row" style="--acc:#7A5AF8" href="#products" data-tab-link="people">
+              <img src="assets/brand/people-mark.png" alt="" width="36" height="36" loading="lazy" decoding="async"/>
+              <span><b>HISYNC People</b><small>Recruitment, attendance, payroll, statutory</small></span>
+              <strong>1 subscription</strong>
+            </a>
+            <a class="ledger-row" style="--acc:#2B5BF0" href="#products" data-tab-link="assetx">
+              <img src="assets/brand/assetx-mark.png" alt="" width="36" height="36" loading="lazy" decoding="async"/>
+              <span><b>AssetX</b><small>Procurement, warehouse, assets, maintenance</small></span>
+              <strong>1 subscription</strong>
+            </a>
+            <a class="ledger-row" style="--acc:#0FA38A" href="#products" data-tab-link="ordentra">
+              <img src="assets/brand/ordentra-mark.png?v=2" alt="" width="36" height="36" loading="lazy" decoding="async"/>
+              <span><b>Ordentra</b><small>Orders, POS, delivery, collections</small></span>
+              <strong>1 subscription</strong>
+            </a>
           </div>
-          <div class="step-link"></div>
-          <div class="step">
-            <span class="step-num">STEP 02</span>
-            <div><b>One Subscription</b><span>A single subscription — no module-wise pricing tables</span></div>
-          </div>
-          <div class="step-link"></div>
-          <div class="step">
-            <span class="step-num">STEP 03</span>
-            <div><b>Complete Module Access</b><span>The complete available feature set, ready when you need it</span></div>
-          </div>
+          <p class="ledger-note">Every module that product ships is on. Grow into it — don&rsquo;t buy it again.</p>
         </div>
       </div>
-    </div>
-    <div class="keyplate reveal">
-      <p class="statement">One Product. One Subscription. Complete Access.</p>
-      <p>Choose the HISYNC product that fits your business requirements and get the complete product experience.</p>
+      <div class="ledger-void">
+        <span>Not on the invoice</span>
+        <b>Per-module SKUs</b>
+        <b>Feature unlocks</b>
+        <b>Add-on packs</b>
+      </div>
     </div>
   </div>
 </section>
