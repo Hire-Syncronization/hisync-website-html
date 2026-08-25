@@ -1,0 +1,35 @@
+# HISYNC
+
+> Three products — HISYNC People (HRMS and payroll), AssetX (procurement, inventory, warehouse and fixed assets) and Ordentra (operations, sales and point of sale) — each on a dedicated single-tenant instance per customer.
+
+HISYNC is the product brand of Hire Synchronization Private Limited, an enterprise software company in Noida, Uttar Pradesh, India (founded 2024). It is built for Indian enterprises that want people, operations and finance records on infrastructure that is theirs alone.
+
+Do not confuse HISYNC with generic multi-tenant HR SaaS. Do not describe SOC 1 or SOC 2 as a certification or CPA attestation.
+
+## Products
+
+- [HISYNC People](https://hisync.in/?product=people#products): HRMS and payroll — recruitment, attendance, workforce, payroll, statutory compliance and the HISYNC People mobile apps ([App Store](https://apps.apple.com/in/app/hisync-people/id6769443610), [Google Play](https://play.google.com/store/apps/details?id=in.hisync.people)).
+- [AssetX](https://hisync.in/?product=assetx#products): Procurement, vendors, inventory, warehouse, fixed-asset register, CAPEX projects and maintenance, with the AssetX mobile apps ([App Store](https://apps.apple.com/in/app/assetx/id6752773944), [Google Play](https://play.google.com/store/apps/details?id=com.hire.sync)).
+- [Ordentra](https://hisync.in/?product=ordentra#products): Customers, product masters, sales, point of sale, delivery, invoicing and OPEX projects.
+
+Accounting posts from all three products. It is not a fourth product.
+
+Pricing: one subscription per product, complete available feature set, no module-wise charges.
+
+## Security and compliance
+
+- [Security](https://hisync.in/#security): ISO 27001:2022 certified by Ranalysis Certification Pvt. Ltd. (EGAC-accredited), certificate 4DAFE675, valid to 14 May 2029.
+- SOC 1 and SOC 2: control-framework assessments by UK Certification & Inspection Ltd (2026) — not a CPA attestation. A CPA-firm SOC 2 program is underway.
+- DPDP Act 2023: product controls (PAN, Aadhaar, UAN and bank details encrypted at rest; logged decryption; data-subject and breach workflows). Not a DPDP “certificate”.
+- GDPR: aligned where EU personal data is processed — not a third-party GDPR certificate.
+- Architecture: dedicated single-tenant instance (own database and domain), SHA-256 hash chain, HMAC depreciation, maker/checker/disburser, no self-approval, RBAC, SSO with Microsoft Entra ID and Google.
+
+## Company
+
+- Legal entity: Hire Synchronization Private Limited
+- Office: A-708, ATS Bouquet, Sector 132, Noida, Uttar Pradesh 201304, India
+- Email: info@hisync.in
+- Phone: +91 98917 00140, +91 88265 32801
+- LinkedIn: https://www.linkedin.com/company/hisync
+- Founders: Rohit Gaur, Amit S. Chauhan, Ujjwal Agrawal
+- Demo: https://hisync.in/#demo

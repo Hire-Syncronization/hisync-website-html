@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HISYNC | HRMS, Asset &amp; Warehouse Management, Procurement and Operations Software — One Subscription, Complete Access</title>
-<meta name="description" content="HISYNC is the enterprise software suite from Hire Synchronization Private Limited — HISYNC People (HRMS &amp; payroll), AssetX (procurement, inventory, warehouse &amp; asset management) and Ordentra (business operations, sales &amp; point of sale). One subscription. Complete product access. No module-wise charges. Runs as your complete business system, or as a sub-system alongside your existing ERP and tools."/>
-<link rel="icon" href="assets/brand/favicon.png" type="image/png"/>
+<title>HISYNC | HRMS, Asset Management &amp; Operations Software</title>
+<meta name="description" content="HISYNC People, AssetX and Ordentra — HR, payroll, assets, warehouse and operations on a dedicated instance. ISO 27001:2022. One subscription per product."/>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+<meta name="author" content="Hire Synchronization Private Limited"/>
+<link rel="canonical" href="https://hisync.in/"/>
+<link rel="alternate" type="text/plain" href="https://hisync.in/llms.txt" title="LLM content"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="HISYNC"/>
+<meta property="og:locale" content="en_IN"/>
+<meta property="og:url" content="https://hisync.in/"/>
+<meta property="og:title" content="HISYNC | HRMS, Asset Management &amp; Operations Software"/>
+<meta property="og:description" content="HISYNC People, AssetX and Ordentra — HR, payroll, assets, warehouse and operations on a dedicated instance. ISO 27001:2022. One subscription per product."/>
+<meta property="og:image" content="https://hisync.in/assets/og/hisync-og.png"/>
+<meta property="og:image:secure_url" content="https://hisync.in/assets/og/hisync-og.png"/>
+<meta property="og:image:type" content="image/png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="HISYNC — HRMS, asset management and operations software for Indian enterprises"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="HISYNC | HRMS, Asset Management &amp; Operations Software"/>
+<meta name="twitter:description" content="HISYNC People, AssetX and Ordentra — HR, payroll, assets, warehouse and operations on a dedicated instance. ISO 27001:2022."/>
+<meta name="twitter:image" content="https://hisync.in/assets/og/hisync-og.png"/>
+<meta name="twitter:image:alt" content="HISYNC — HRMS, asset management and operations software"/>
+<meta name="theme-color" content="#05070d"/>
+<meta name="color-scheme" content="dark light"/>
+<link rel="icon" href="assets/brand/favicon.png" type="image/png" sizes="512x512"/>
 <link rel="apple-touch-icon" href="assets/brand/favicon.png"/>
+<link rel="preload" href="assets/brand/hisync-dark.png" as="image"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet"/>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <style>
 /* ============================================================
    HISYNC — design tokens
@@ -113,6 +136,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,5.4vw,4.2rem);line-height:1.06;letter-spacing:-.038em;color:#F4F7FC;margin:14px 0 16px;max-width:900px;text-wrap:balance}
 .hero h1 .grad{color:#9EB4D6;background:none;-webkit-text-fill-color:unset;font-weight:700}
 .hero-lead{color:#B4C0D6;font-size:1.06rem;line-height:1.6;max-width:34rem}
+.hero-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:22px}
 .hero-copy{padding-top:18px}
 .hero-clients{display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px;margin-top:22px}
 .hero-clients em{font-style:normal;font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:#7E8DAB;margin-right:4px}
@@ -362,7 +386,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 .form-error{display:none;color:#C0362C;font-size:.83rem;font-weight:600;text-align:left;margin:4px 0 0}
 .form-error.show{display:block}
 .hp{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
-.recaptcha-wrap{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.recaptcha-wrap{display:flex;flex-direction:column;align-items:flex-start;gap:6px;min-height:86px}
 .recaptcha-wrap .field-hint{margin:0}
 .btn[disabled]{opacity:.55;pointer-events:none;transform:none;box-shadow:none}
 .form-success{display:none;text-align:left;padding:36px 28px 40px}
@@ -462,11 +486,15 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 }
 
 /* ---------- logo, glance, badges, clients, about, contact-info ---------- */
+.skip-link{position:absolute;left:16px;top:-56px;z-index:200;background:#2B5BF0;color:#fff;padding:10px 16px;border-radius:10px;font-weight:600;font-size:.9rem}
+.skip-link:focus{top:12px;outline:2px solid #fff;outline-offset:2px}
 .brand-logo{height:28px;width:auto;display:block}
 .footer .brand-logo{height:30px}
-.glance{background:var(--mist,#F2F5FA);border-bottom:1px solid var(--line,#E3E9F2);padding:38px 0}
+.glance{background:var(--mist,#F2F5FA);border-bottom:1px solid var(--line,#E3E9F2);padding:48px 0}
+.glance-h{font-family:var(--display);font-weight:700;font-size:1.18rem;letter-spacing:-.02em;color:#101C3A;text-align:center;margin:0 0 8px}
+.glance-sub{text-align:center;color:#66748F;font-size:.92rem;margin:0 0 28px}
 .glance-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.g-q{font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--blue,#2B5BF0);display:block;margin-bottom:9px}
+.g-q{font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--blue,#2B5BF0);display:block;margin:0 0 9px}
 .glance-card p{font-size:.93rem;color:#43506A;line-height:1.65}
 .glance-card a{color:var(--blue,#2B5BF0);font-weight:600}
 .store-links{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:18px}
@@ -547,8 +575,9 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
   .hero-floor{opacity:.35;width:120%;right:-30%}
   .hero-well{width:380px;height:380px;right:-8%;top:8%;opacity:.7}
   .hero-copy{padding-top:8px}
-  .hero-ctas{flex-direction:column;align-items:stretch}
+  .hero-ctas{flex-direction:column;align-items:stretch;gap:12px}
   .hero-ctas .btn{width:100%}
+  .hero-ctas .btn:hover{transform:none}
   .flow{flex-wrap:wrap;justify-content:center;gap:12px 16px;padding-top:8px}
   .flow::before{display:none}
   .flow-link{display:none}
@@ -578,7 +607,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 }
 
 @media(max-width:1020px){
-  .glance-grid{grid-template-columns:1fr}
+  .glance-grid{grid-template-columns:1fr 1fr}
   .founders{grid-template-columns:1fr}
   .hero-grid{grid-template-columns:1fr;gap:28px}
   .hero-visual{max-width:540px;margin:0 auto;padding:4px 0 8px}
@@ -590,18 +619,295 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
   .dfeed,.fchip{display:none}
   .dchart svg{max-height:88px}
 }
-@media(max-width:760px){.stats-row{gap:24px}.team-grid{grid-template-columns:repeat(2,1fr)}.tm-card{padding:16px 12px}}
+@media(max-width:760px){.stats-row{gap:24px}.team-grid{grid-template-columns:repeat(2,1fr)}.tm-card{padding:16px 12px}.glance-grid{grid-template-columns:1fr}}
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"HISYNC","legalName":"Hire Synchronization Private Limited","url":"https://hisync.in/","email":"info@hisync.in","telephone":"+91 98917 00140","foundingDate":"2024","sameAs":["https://www.linkedin.com/company/hisync"],"address":{"@type":"PostalAddress","streetAddress":"A-708, ATS Bouquet, Sector 132","addressLocality":"Noida","addressRegion":"Uttar Pradesh","postalCode":"201304","addressCountry":"IN"},"founder":[{"@type":"Person","name":"Rohit Gaur"},{"@type":"Person","name":"Amit S. Chauhan"},{"@type":"Person","name":"Ujjwal Agrawal"}]}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://hisync.in/#organization",
+      "name": "HISYNC",
+      "legalName": "Hire Synchronization Private Limited",
+      "alternateName": [
+        "HiSync",
+        "Hire Synchronization"
+      ],
+      "url": "https://hisync.in/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://hisync.in/assets/brand/hisync-light.png",
+        "width": 900,
+        "height": 205
+      },
+      "image": "https://hisync.in/assets/og/hisync-og.png",
+      "email": "info@hisync.in",
+      "telephone": [
+        "+91-98917-00140",
+        "+91-88265-32801"
+      ],
+      "foundingDate": "2024",
+      "description": "HISYNC People, AssetX and Ordentra — HR, payroll, assets, warehouse and operations on a dedicated instance. ISO 27001:2022. One subscription per product.",
+      "sameAs": [
+        "https://www.linkedin.com/company/hisync",
+        "https://apps.apple.com/in/app/hisync-people/id6769443610",
+        "https://play.google.com/store/apps/details?id=in.hisync.people",
+        "https://apps.apple.com/in/app/assetx/id6752773944",
+        "https://play.google.com/store/apps/details?id=com.hire.sync"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "A-708, ATS Bouquet, Sector 132",
+        "addressLocality": "Noida",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "201304",
+        "addressCountry": "IN"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "info@hisync.in",
+          "telephone": "+91-98917-00140",
+          "areaServed": "IN",
+          "availableLanguage": [
+            "English"
+          ]
+        }
+      ],
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "Rohit Gaur",
+          "jobTitle": "Founder · Product",
+          "sameAs": [
+            "https://www.linkedin.com/in/gaurrohit660/"
+          ],
+          "url": "https://www.linkedin.com/in/gaurrohit660/"
+        },
+        {
+          "@type": "Person",
+          "name": "Amit S. Chauhan",
+          "jobTitle": "Founder · Consulting",
+          "sameAs": [
+            "https://www.linkedin.com/in/amit-singh-chauhan-79a5328/"
+          ],
+          "url": "https://www.linkedin.com/in/amit-singh-chauhan-79a5328/"
+        },
+        {
+          "@type": "Person",
+          "name": "Ujjwal Agrawal",
+          "jobTitle": "Founder · Finance",
+          "sameAs": [
+            "https://www.linkedin.com/in/ujjwalagrawal1/"
+          ],
+          "url": "https://www.linkedin.com/in/ujjwalagrawal1/"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "HISYNC products",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@id": "https://hisync.in/#product-people"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@id": "https://hisync.in/#product-assetx"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@id": "https://hisync.in/#product-ordentra"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://hisync.in/#website",
+      "url": "https://hisync.in/",
+      "name": "HISYNC",
+      "inLanguage": "en-IN",
+      "publisher": {
+        "@id": "https://hisync.in/#organization"
+      },
+      "description": "HISYNC People, AssetX and Ordentra — HR, payroll, assets, warehouse and operations on a dedicated instance. ISO 27001:2022. One subscription per product."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://hisync.in/#webpage",
+      "url": "https://hisync.in/",
+      "name": "HISYNC | HRMS, Asset Management & Operations Software",
+      "description": "HISYNC People, AssetX and Ordentra — HR, payroll, assets, warehouse and operations on a dedicated instance. ISO 27001:2022. One subscription per product.",
+      "inLanguage": "en-IN",
+      "isPartOf": {
+        "@id": "https://hisync.in/#website"
+      },
+      "about": {
+        "@id": "https://hisync.in/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://hisync.in/assets/og/hisync-og.png",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://hisync.in/#product-people",
+      "name": "HISYNC People",
+      "description": "HRMS and payroll software for Indian organisations — recruitment, attendance, workforce, payroll, statutory compliance and employee self-service.",
+      "url": "https://hisync.in/?product=people#products",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, iOS, Android",
+      "brand": {
+        "@id": "https://hisync.in/#organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://hisync.in/#demo",
+        "availability": "https://schema.org/OnlineOnly",
+        "priceCurrency": "INR",
+        "description": "One subscription. Complete available product access. No module-wise charges."
+      },
+      "isPartOf": {
+        "@id": "https://hisync.in/#organization"
+      },
+      "downloadUrl": [
+        "https://apps.apple.com/in/app/hisync-people/id6769443610",
+        "https://play.google.com/store/apps/details?id=in.hisync.people"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://hisync.in/#product-assetx",
+      "name": "AssetX",
+      "description": "Procurement, inventory, warehouse and fixed-asset software — from purchase requisition to capitalisation, physical verification and maintenance.",
+      "url": "https://hisync.in/?product=assetx#products",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, iOS, Android",
+      "brand": {
+        "@id": "https://hisync.in/#organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://hisync.in/#demo",
+        "availability": "https://schema.org/OnlineOnly",
+        "priceCurrency": "INR",
+        "description": "One subscription. Complete available product access. No module-wise charges."
+      },
+      "isPartOf": {
+        "@id": "https://hisync.in/#organization"
+      },
+      "downloadUrl": [
+        "https://apps.apple.com/in/app/assetx/id6752773944",
+        "https://play.google.com/store/apps/details?id=com.hire.sync"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://hisync.in/#product-ordentra",
+      "name": "Ordentra",
+      "description": "Operations, sales and point-of-sale software — customers, product masters, delivery, invoicing, payments and OPEX projects.",
+      "url": "https://hisync.in/?product=ordentra#products",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "brand": {
+        "@id": "https://hisync.in/#organization"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://hisync.in/#demo",
+        "availability": "https://schema.org/OnlineOnly",
+        "priceCurrency": "INR",
+        "description": "One subscription. Complete available product access. No module-wise charges."
+      },
+      "isPartOf": {
+        "@id": "https://hisync.in/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://hisync.in/#faq",
+      "url": "https://hisync.in/#faq",
+      "isPartOf": {
+        "@id": "https://hisync.in/#webpage"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is HISYNC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An enterprise software suite by Hire Synchronization Private Limited, built by ex-Big 4 consultants and Silicon Valley product leaders. Three products: HISYNC People (HR and payroll), AssetX (procurement, inventory, warehouse and assets) and Ordentra (operations, sales and point of sale)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is HISYNC for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Enterprises, mid-market companies and growing businesses — whether you already run an ERP, use a few disconnected tools, or have no system at all. HISYNC fits every starting point, across manufacturing, retail, F&B, healthcare, services and more."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is HISYNC priced?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "One subscription per product — every module and feature included. No module-wise charges, no feature unlocking."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does HISYNC replace my ERP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Either. HISYNC can run as your complete business system, or as a sub-system alongside your existing ERP and tools. Ready-to-use integrations include Microsoft 365, Google directory, Oracle NetSuite, E-Way Bill, e-invoicing, eTimeOffice, Razorpay, Shopify and KYB verification."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is HISYNC ISO 27001 certified?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. HISYNC is ISO 27001:2022 certified by Ranalysis Certification Pvt. Ltd. (EGAC-accredited). Certificate 4DAFE675, valid to 14 May 2029. SOC 1 and SOC 2 are control-framework assessments, not a CPA attestation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is each customer on a dedicated instance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Each customer runs an isolated application with its own database and domain. No shared schema, no pooled tenancy, no cross-customer query path."
+          }
+        }
+      ]
+    }
+  ]
+}
 </script>
 </head>
 <body>
+<a class="skip-link" href="#top">Skip to content</a>
 <!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="#top" aria-label="HISYNC home">
-      <img class="brand-logo" src="assets/brand/hisync-dark.png" alt="HISYNC" width="180" height="41"/>
+      <img class="brand-logo" src="assets/brand/hisync-dark.png" alt="HISYNC" width="180" height="41" fetchpriority="high"/>
     </a>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="#products">Products</a>
@@ -629,6 +935,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
   </div>
 </div>
 
+<main>
 <!-- ================= HERO ================= -->
 <section class="hero" id="top">
   <div class="hero-floor" aria-hidden="true"></div>
@@ -780,22 +1087,36 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
   </div>
 </section>
 
-<!-- ================= HISYNC AT A GLANCE ================= -->
-<section class="glance" id="glance">
+<!-- ================= FAQ ================= -->
+<section class="glance" id="faq">
   <div class="container">
+    <h2 class="glance-h">Common questions about HISYNC</h2>
+    <p class="glance-sub">Straight answers on the products, pricing, security and how HISYNC sits next to an ERP.</p>
     <div class="glance-grid">
-      <div class="glance-card reveal">
-        <span class="g-q">What is HISYNC?</span>
+      <article class="glance-card reveal">
+        <h3 class="g-q">What is HISYNC?</h3>
         <p>An enterprise software suite by <b>Hire Synchronization Private Limited</b>, built by ex-Big&nbsp;4 consultants and Silicon Valley product leaders. Three products: <b>HISYNC People</b> (HR &amp; payroll), <b>AssetX</b> (procurement, inventory, warehouse &amp; assets) and <b>Ordentra</b> (operations, sales &amp; point of sale).</p>
-      </div>
-      <div class="glance-card reveal">
-        <span class="g-q">Who is it for?</span>
+      </article>
+      <article class="glance-card reveal">
+        <h3 class="g-q">Who is HISYNC for?</h3>
         <p>Enterprises, mid-market companies and growing businesses — whether you already run an ERP, use a few disconnected tools, or have no system at all. HISYNC fits every starting point, across manufacturing, retail, F&amp;B, healthcare, services and more.</p>
-      </div>
-      <div class="glance-card reveal">
-        <span class="g-q">How is it priced?</span>
+      </article>
+      <article class="glance-card reveal">
+        <h3 class="g-q">How is HISYNC priced?</h3>
         <p>One subscription per product — every module and feature included. No module-wise charges, no feature unlocking. <a href="#subscription">See how it works →</a></p>
-      </div>
+      </article>
+      <article class="glance-card reveal">
+        <h3 class="g-q">Does HISYNC replace my ERP?</h3>
+        <p>Either. HISYNC can run as your complete business system, or as a sub-system alongside your existing ERP and tools. Ready-to-use integrations include Microsoft 365, Google directory, Oracle NetSuite, E-Way Bill, e-invoicing, eTimeOffice, Razorpay, Shopify and KYB verification. <a href="#integrations">See integrations →</a></p>
+      </article>
+      <article class="glance-card reveal">
+        <h3 class="g-q">Is HISYNC ISO 27001 certified?</h3>
+        <p>Yes. HISYNC is ISO 27001:2022 certified by Ranalysis Certification Pvt. Ltd. (EGAC-accredited). Certificate 4DAFE675, valid to 14 May 2029. SOC 1 and SOC 2 are control-framework assessments, not a CPA attestation. <a href="#security">Read the security section →</a></p>
+      </article>
+      <article class="glance-card reveal">
+        <h3 class="g-q">Is each customer on a dedicated instance?</h3>
+        <p>Yes. Each customer runs an isolated application with its own database and domain. No shared schema, no pooled tenancy, no cross-customer query path. <a href="#security">See the architecture →</a></p>
+      </article>
     </div>
   </div>
 </section>
@@ -805,7 +1126,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
   <div class="container">
     <div class="center reveal">
       <span class="kicker">The Ecosystem</span>
-      <h2>Everything Your Business Needs to Stay in Sync.</h2>
+      <h2>HR, Warehouse, Sales and Finance on One Thread.</h2>
       <p class="lead">Most companies run people, warehouse, sales and finance in separate tools. HISYNC replaces that scatter with three connected products — and accounting that sits on the same thread.</p>
     </div>
 
@@ -828,7 +1149,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 
     <div class="eco-suite">
       <a class="eco-col reveal" style="--acc:#7A5AF8" href="#products" data-tab-link="people">
-        <span class="eco-col-logo"><img src="assets/brand/people.png" alt="" width="220" height="75"/></span>
+        <span class="eco-col-logo"><img src="assets/brand/people.png" alt="HISYNC People" width="220" height="75" loading="lazy"/></span>
         <div class="eco-col-body">
           <span class="eco-col-k">People &amp; HR</span>
           <h3>HISYNC People</h3>
@@ -843,7 +1164,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
         <span class="eco-col-cta">Explore People →</span>
       </a>
       <a class="eco-col reveal" style="--acc:#2B5BF0" href="#products" data-tab-link="assetx">
-        <span class="eco-col-logo"><img src="assets/brand/assetx.png" alt="" width="220" height="73"/></span>
+        <span class="eco-col-logo"><img src="assets/brand/assetx.png" alt="AssetX" width="220" height="73" loading="lazy"/></span>
         <div class="eco-col-body">
           <span class="eco-col-k">Procurement &amp; assets</span>
           <h3>AssetX</h3>
@@ -858,7 +1179,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
         <span class="eco-col-cta">Explore AssetX →</span>
       </a>
       <a class="eco-col reveal" style="--acc:#0FA38A" href="#products" data-tab-link="ordentra">
-        <span class="eco-col-logo"><img src="assets/brand/ordentra.png?v=2" alt="" width="220" height="66"/></span>
+        <span class="eco-col-logo"><img src="assets/brand/ordentra.png?v=2" alt="Ordentra" width="220" height="66" loading="lazy"/></span>
         <div class="eco-col-body">
           <span class="eco-col-k">Operations &amp; sales</span>
           <h3>Ordentra</h3>
@@ -875,7 +1196,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
     </div>
 
     <div class="eco-finance reveal">
-      <img class="eco-fin-mark" src="assets/brand/hisync-mark.png" alt="" width="48" height="48"/>
+      <img class="eco-fin-mark" src="assets/brand/hisync-mark.png" alt="" width="48" height="48" loading="lazy"/>
       <div>
         <b>Finance is not a fourth product. It runs through all three.</b>
         <p>Invoicing, payments and accounting post from People, AssetX and Ordentra — so the floor, the counter and the books stay on the same thread.</p>
@@ -974,8 +1295,8 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
   <div class="container">
     <div class="center reveal">
       <span class="kicker">Our Products</span>
-      <h2>Three Powerful Products. One Connected Ecosystem.</h2>
-      <p class="lead">Each product gives you the complete experience for its business area — explore the capabilities below.</p>
+      <h2>HRMS, Asset Management and Operations — Three Products.</h2>
+      <p class="lead">Each product gives you the complete experience for its business area — HISYNC People for HR and payroll, AssetX for procurement and assets, Ordentra for sales and operations.</p>
       <div class="tabs" role="tablist" aria-label="HISYNC products">
         <button class="tab active" role="tab" aria-selected="true" data-tab="people" id="tab-people"><img src="assets/brand/people-mark.png" alt="" width="20" height="20"/>HISYNC People</button>
         <button class="tab" role="tab" aria-selected="false" data-tab="assetx" id="tab-assetx"><img src="assets/brand/assetx-mark.png" alt="" width="20" height="20"/>AssetX</button>
@@ -986,7 +1307,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
     <!-- HISYNC PEOPLE -->
     <div class="panel active" data-accent="violet" data-panel="people" role="tabpanel" aria-labelledby="tab-people">
       <div class="prod-side">
-        <img class="prod-logo" src="assets/brand/people.png" alt="HISYNC People" width="220" height="75"/>
+        <img class="prod-logo" src="assets/brand/people.png" alt="HISYNC People" width="220" height="75" loading="lazy"/>
         <p class="prod-cat">HR, Payroll &amp; Workforce Management</p>
         <h3 class="prod-name">HISYNC People</h3>
         <p class="prod-desc">HISYNC People helps organisations manage the complete employee lifecycle — from recruitment and onboarding to attendance, payroll, performance, compliance and separation. Designed for HR teams, employees and business leaders, the platform brings workforce operations into one connected system.</p>
@@ -1006,7 +1327,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
     <!-- ASSETX -->
     <div class="panel" data-accent="blue" data-panel="assetx" role="tabpanel" aria-labelledby="tab-assetx" hidden>
       <div class="prod-side">
-        <img class="prod-logo" src="assets/brand/assetx.png" alt="AssetX by HISYNC" width="220" height="73"/>
+        <img class="prod-logo" src="assets/brand/assetx.png" alt="AssetX by HISYNC" width="220" height="73" loading="lazy"/>
         <p class="prod-cat">Procurement, Inventory, Warehouse, Assets, CAPEX Projects &amp; Budgets</p>
         <h3 class="prod-name">AssetX</h3>
         <p class="prod-desc">AssetX helps organisations manage the complete journey of procurement, vendors, inventory, warehouse operations and fixed assets, along with capital projects and CAPEX budgets. From raising a purchase requisition to vendor onboarding, purchasing, receiving, warehousing, inventory movement, project-based procurement, CWIP, asset capitalisation, depreciation, physical verification, maintenance, payments and disposal — AssetX provides visibility and control across the complete lifecycle.</p>
@@ -1026,7 +1347,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
     <!-- ORDENTRA -->
     <div class="panel" data-accent="teal" data-panel="ordentra" role="tabpanel" aria-labelledby="tab-ordentra" hidden>
       <div class="prod-side">
-        <img class="prod-logo" src="assets/brand/ordentra.png?v=2" alt="Ordentra by HISYNC" width="220" height="66"/>
+        <img class="prod-logo" src="assets/brand/ordentra.png?v=2" alt="Ordentra by HISYNC" width="220" height="66" loading="lazy"/>
         <p class="prod-cat">Business Operations, OPEX Projects, Budgets, Sales &amp; Point of Sale</p>
         <h3 class="prod-name">Ordentra</h3>
         <p class="prod-desc">Ordentra helps businesses manage customers, product information, operational projects, OPEX budgets, sales, point-of-sale (POS) billing, delivery, invoicing, payments and accounting through connected workflows.</p>
@@ -1081,15 +1402,15 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
       <p class="lead">Ready-to-use integrations let HISYNC run as a sub-system beside your existing ERP and tools — or as the system itself. Connect the platforms your business already relies on.</p>
     </div>
     <div class="int-grid">
-      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/microsoft-365.svg" alt="" width="48" height="48"/></span><div><b>Microsoft 365 Directory</b><p>Employee and directory-related workflows.</p></div></div>
-      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/google.svg" alt="" width="48" height="48"/></span><div><b>Google Employee Directory</b><p>Connect employee and organisational information.</p></div></div>
-      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/netsuite.svg" alt="" width="48" height="48"/></span><div><b>Oracle NetSuite</b><p>Ready-to-use ERP integration capabilities.</p></div></div>
-      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/eway-bill.png" alt="" width="48" height="48"/></span><div><b>E-Way Bill</b><p>Integration for relevant E-Way Bill workflows.</p></div></div>
-      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/e-invoice.png" alt="" width="48" height="48"/></span><div><b>E-Invoicing</b><p>Integration for relevant e-invoicing processes.</p></div></div>
-      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/etimeoffice.png" alt="" width="48" height="48"/></span><div><b>eTimeOffice</b><p>Biometric and attendance integration.</p></div></div>
-      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/razorpay.svg" alt="" width="48" height="48"/></span><div><b>Razorpay</b><p>Integration for relevant payment workflows.</p></div></div>
-      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/shopify.svg" alt="" width="48" height="48"/></span><div><b>Shopify</b><p>Business and sales workflow integration.</p></div></div>
-      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/kyb.svg" alt="" width="48" height="48"/></span><div><b>KYB Verification Suite</b><p>Business and vendor verification workflows.</p></div></div>
+      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/microsoft-365.svg" alt="Microsoft 365" width="48" height="48" loading="lazy"/></span><div><b>Microsoft 365 Directory</b><p>Employee and directory-related workflows.</p></div></div>
+      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/google.svg" alt="Google" width="48" height="48" loading="lazy"/></span><div><b>Google Employee Directory</b><p>Connect employee and organisational information.</p></div></div>
+      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/netsuite.svg" alt="Oracle NetSuite" width="48" height="48" loading="lazy"/></span><div><b>Oracle NetSuite</b><p>Ready-to-use ERP integration capabilities.</p></div></div>
+      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/eway-bill.png" alt="E-Way Bill" width="48" height="48" loading="lazy"/></span><div><b>E-Way Bill</b><p>Integration for relevant E-Way Bill workflows.</p></div></div>
+      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/e-invoice.png" alt="E-Invoicing" width="48" height="48" loading="lazy"/></span><div><b>E-Invoicing</b><p>Integration for relevant e-invoicing processes.</p></div></div>
+      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/etimeoffice.png" alt="eTimeOffice" width="48" height="48" loading="lazy"/></span><div><b>eTimeOffice</b><p>Biometric and attendance integration.</p></div></div>
+      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/razorpay.svg" alt="Razorpay" width="48" height="48" loading="lazy"/></span><div><b>Razorpay</b><p>Integration for relevant payment workflows.</p></div></div>
+      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/shopify.svg" alt="Shopify" width="48" height="48" loading="lazy"/></span><div><b>Shopify</b><p>Business and sales workflow integration.</p></div></div>
+      <div class="int-card reveal"><span class="int-logo"><img src="assets/integrations/kyb.svg" alt="KYB Verification Suite" width="48" height="48" loading="lazy"/></span><div><b>KYB Verification Suite</b><p>Business and vendor verification workflows.</p></div></div>
     </div>
     <p class="footnote center" style="text-align:center">Less Manual Work. Better Connected Systems.</p>
   </div>
@@ -1236,17 +1557,17 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
     </div>
     <div class="logo-grid reveal">
       <div class="client-card">
-        <img src="assets/clients/blue-tokai.png" alt="Blue Tokai Coffee Roasters logo" loading="lazy"/>
+        <img src="assets/clients/blue-tokai.png" alt="Blue Tokai Coffee Roasters logo" width="160" height="88" loading="lazy"/>
         <span class="client-name">Blue Tokai Coffee Roasters</span>
         <span class="client-ind">Coffee &amp; F&amp;B Retail</span>
       </div>
       <div class="client-card">
-        <img src="assets/clients/amama.png" alt="AMAMA Jewels logo" loading="lazy"/>
+        <img src="assets/clients/amama.png" alt="AMAMA Jewels logo" width="160" height="88" loading="lazy"/>
         <span class="client-name">AMAMA Jewels</span>
         <span class="client-ind">Jewellery &amp; Retail</span>
       </div>
       <div class="client-card">
-        <img src="assets/clients/jagruti.svg" alt="Jagruti Rehabilitation Centre logo" loading="lazy"/>
+        <img src="assets/clients/jagruti.svg" alt="Jagruti Rehabilitation Centre logo" width="160" height="88" loading="lazy"/>
         <span class="client-name">Jagruti Rehabilitation Centre</span>
         <span class="client-ind">Healthcare</span>
       </div>
@@ -1285,7 +1606,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
       <p class="founders-sub">Three founders. 50+ combined years. You work with them directly.</p>
       <div class="founders">
         <div class="founder-card">
-          <img class="f-photo" src="assets/team/rohit.webp" data-fb="https://hisync.in/images/our_team/rohit.webp" alt="Rohit Gaur" loading="lazy" onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.removeAttribute('data-fb');}else{this.style.display='none';this.nextElementSibling.style.display='grid';}"/>
+          <img class="f-photo" width="62" height="62" src="assets/team/rohit.webp" data-fb="https://hisync.in/images/our_team/rohit.webp" alt="Rohit Gaur" loading="lazy" onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.removeAttribute('data-fb');}else{this.style.display='none';this.nextElementSibling.style.display='grid';}"/>
           <span class="f-init" style="display:none">RG</span>
           <div>
             <b>Rohit Gaur</b>
@@ -1295,7 +1616,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
           </div>
         </div>
         <div class="founder-card">
-          <img class="f-photo" src="assets/team/amit.webp" data-fb="https://hisync.in/images/our_team/amit.webp" alt="Amit S. Chauhan" loading="lazy" onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.removeAttribute('data-fb');}else{this.style.display='none';this.nextElementSibling.style.display='grid';}"/>
+          <img class="f-photo" width="62" height="62" src="assets/team/amit.webp" data-fb="https://hisync.in/images/our_team/amit.webp" alt="Amit S. Chauhan" loading="lazy" onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.removeAttribute('data-fb');}else{this.style.display='none';this.nextElementSibling.style.display='grid';}"/>
           <span class="f-init" style="display:none">AC</span>
           <div>
             <b>Amit S. Chauhan</b>
@@ -1305,7 +1626,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
           </div>
         </div>
         <div class="founder-card">
-          <img class="f-photo" src="assets/team/ujjwal.webp" data-fb="https://hisync.in/images/our_team/ujjwal.webp" alt="Ujjwal Agrawal" loading="lazy" onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.removeAttribute('data-fb');}else{this.style.display='none';this.nextElementSibling.style.display='grid';}"/>
+          <img class="f-photo" width="62" height="62" src="assets/team/ujjwal.webp" data-fb="https://hisync.in/images/our_team/ujjwal.webp" alt="Ujjwal Agrawal" loading="lazy" onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.removeAttribute('data-fb');}else{this.style.display='none';this.nextElementSibling.style.display='grid';}"/>
           <span class="f-init" style="display:none">UA</span>
           <div>
             <b>Ujjwal Agrawal</b>
@@ -1320,7 +1641,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
         <p class="founders-sub">Leadership sets the direction — this team designs, ships and operates every HISYNC platform.</p>
         <div class="team-grid">
         <div class="tm-card">
-          <img class="tm-photo" src="assets/team/abhishek.webp" data-fb="https://hisync.in/images/our_team/abhishek.webp" alt="Abhishek Rajput" loading="lazy" onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.removeAttribute('data-fb');}else{this.style.display='none';this.nextElementSibling.style.display='grid';}"/>
+          <img class="tm-photo" width="66" height="66" src="assets/team/abhishek.webp" data-fb="https://hisync.in/images/our_team/abhishek.webp" alt="Abhishek Rajput" loading="lazy" onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.removeAttribute('data-fb');}else{this.style.display='none';this.nextElementSibling.style.display='grid';}"/>
           <span class="tm-init" style="display:none">AR</span>
           <b>Abhishek Rajput</b>
           <em>Founding Engineer &amp; Technical Lead</em>
@@ -1328,7 +1649,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
           <a href="https://www.linkedin.com/in/abhishek-rajput-83b3b6271/" target="_blank" rel="noopener">LinkedIn &#8599;</a>
         </div>
         <div class="tm-card">
-          <img class="tm-photo" src="assets/team/abhay.webp" data-fb="https://hisync.in/images/our_team/abhay.webp" alt="Abhay Sagar Kargetti" loading="lazy" onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.removeAttribute('data-fb');}else{this.style.display='none';this.nextElementSibling.style.display='grid';}"/>
+          <img class="tm-photo" width="66" height="66" src="assets/team/abhay.webp" data-fb="https://hisync.in/images/our_team/abhay.webp" alt="Abhay Sagar Kargetti" loading="lazy" onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.removeAttribute('data-fb');}else{this.style.display='none';this.nextElementSibling.style.display='grid';}"/>
           <span class="tm-init" style="display:none">AK</span>
           <b>Abhay Sagar Kargetti</b>
           <em>Senior Software Engineer · Backend Systems</em>
@@ -1336,7 +1657,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
           <a href="https://www.linkedin.com/in/abhaykargeti/" target="_blank" rel="noopener">LinkedIn &#8599;</a>
         </div>
         <div class="tm-card">
-          <img class="tm-photo" src="assets/team/suraj-thakur.webp" data-fb="https://hisync.in/images/our_team/suraj-thakur.webp" alt="Suraj Thakur" loading="lazy" onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.removeAttribute('data-fb');}else{this.style.display='none';this.nextElementSibling.style.display='grid';}"/>
+          <img class="tm-photo" width="66" height="66" src="assets/team/suraj-thakur.webp" data-fb="https://hisync.in/images/our_team/suraj-thakur.webp" alt="Suraj Thakur" loading="lazy" onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.removeAttribute('data-fb');}else{this.style.display='none';this.nextElementSibling.style.display='grid';}"/>
           <span class="tm-init" style="display:none">ST</span>
           <b>Suraj Thakur</b>
           <em>Associate Software Engineer</em>
@@ -1344,7 +1665,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
           <a href="https://www.linkedin.com/in/suraj-thakur-48131421b/" target="_blank" rel="noopener">LinkedIn &#8599;</a>
         </div>
         <div class="tm-card">
-          <img class="tm-photo" src="assets/team/umesh.webp" data-fb="https://hisync.in/images/our_team/umesh.webp" alt="Umesh Goswami" loading="lazy" onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.removeAttribute('data-fb');}else{this.style.display='none';this.nextElementSibling.style.display='grid';}"/>
+          <img class="tm-photo" width="66" height="66" src="assets/team/umesh.webp" data-fb="https://hisync.in/images/our_team/umesh.webp" alt="Umesh Goswami" loading="lazy" onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.removeAttribute('data-fb');}else{this.style.display='none';this.nextElementSibling.style.display='grid';}"/>
           <span class="tm-init" style="display:none">UG</span>
           <b>Umesh Goswami</b>
           <em>Audit &amp; Physical Verification Lead</em>
@@ -1352,7 +1673,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
           <a href="https://www.linkedin.com/in/umesh-goswami-90887a31b/" target="_blank" rel="noopener">LinkedIn &#8599;</a>
         </div>
         <div class="tm-card">
-          <img class="tm-photo" src="assets/team/ayush.webp" data-fb="https://hisync.in/images/our_team/ayush.webp" alt="Ayush Agrawal" loading="lazy" onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.removeAttribute('data-fb');}else{this.style.display='none';this.nextElementSibling.style.display='grid';}"/>
+          <img class="tm-photo" width="66" height="66" src="assets/team/ayush.webp" data-fb="https://hisync.in/images/our_team/ayush.webp" alt="Ayush Agrawal" loading="lazy" onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.removeAttribute('data-fb');}else{this.style.display='none';this.nextElementSibling.style.display='grid';}"/>
           <span class="tm-init" style="display:none">AA</span>
           <b>Ayush Agrawal</b>
           <em>Senior Consultant</em>
@@ -1473,7 +1794,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
           <div class="hp" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"/></div>
           <div class="field full recaptcha-wrap">
             <span class="field-hint">Verification</span>
-            <div class="g-recaptcha" data-sitekey="6LcdSz0sAAAAAMGT696yLzurQ099leQTJ-mcn7Jd"></div>
+            <div id="hisync-recaptcha" class="g-recaptcha"></div>
           </div>
           <p class="form-error" id="formError" role="alert"></p>
           <div class="field full" style="margin-top:14px"><button type="submit" class="btn btn-primary btn-block" id="demoSubmit">Book Your Free Demo</button></div>
@@ -1489,6 +1810,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
   </div>
 </section>
 
+</main>
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
   <div class="container">
@@ -1516,6 +1838,7 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
       <div>
         <h4>Company</h4>
         <ul>
+          <li><a href="#faq">Questions</a></li>
           <li><a href="#integrations">Integrations</a></li>
           <li><a href="#why">Why HISYNC</a></li>
           <li><a href="#clients">Clients</a></li>
@@ -1697,9 +2020,40 @@ if("IntersectionObserver" in window){
    reCAPTCHA v2 site key = NEXT_PUBLIC_RECAPTCHA_SITE_KEY
    Secret stays on the CRM; never ship it in this static site. */
 var LEADS_URL = "https://crm.i-assetx.com/api/contact";
+var RECAPTCHA_SITE_KEY = "6LcdSz0sAAAAAMGT696yLzurQ099leQTJ-mcn7Jd";
 var demoForm = document.getElementById("demoForm");
 var demoSubmit = document.getElementById("demoSubmit");
 var formError = document.getElementById("formError");
+var recaptchaWidgetId = null;
+var recaptchaLoadPromise = null;
+
+function loadCaptcha(){
+  if(recaptchaLoadPromise) return recaptchaLoadPromise;
+  recaptchaLoadPromise = new Promise(function(resolve, reject){
+    function renderWidget(){
+      var el = document.getElementById("hisync-recaptcha");
+      if(el && recaptchaWidgetId === null && window.grecaptcha && typeof grecaptcha.render === "function"){
+        recaptchaWidgetId = grecaptcha.render(el, {sitekey: RECAPTCHA_SITE_KEY});
+      }
+      resolve();
+    }
+    window.__hisyncCaptchaOnload = renderWidget;
+    if(window.grecaptcha && typeof grecaptcha.render === "function"){
+      renderWidget();
+      return;
+    }
+    var s = document.createElement("script");
+    s.src = "https://www.google.com/recaptcha/api.js?onload=__hisyncCaptchaOnload&render=explicit";
+    s.async = true;
+    s.defer = true;
+    s.onerror = function(){ recaptchaLoadPromise = null; reject(new Error("captcha")); };
+    document.head.appendChild(s);
+  });
+  return recaptchaLoadPromise;
+}
+if(demoForm){
+  demoForm.addEventListener("focusin", function(){ loadCaptcha(); }, {once:true});
+}
 
 function showFormError(msg){
   if(!formError) return;
@@ -1718,14 +2072,17 @@ function splitPhone(raw, cc){
 function captchaToken(){
   try{
     if(window.grecaptcha && typeof grecaptcha.getResponse === "function"){
-      return grecaptcha.getResponse() || "";
+      return grecaptcha.getResponse(recaptchaWidgetId == null ? undefined : recaptchaWidgetId) || "";
     }
   }catch(err){}
   return "";
 }
 function resetCaptcha(){
   try{
-    if(window.grecaptcha && typeof grecaptcha.reset === "function") grecaptcha.reset();
+    if(window.grecaptcha && typeof grecaptcha.reset === "function"){
+      if(recaptchaWidgetId == null) grecaptcha.reset();
+      else grecaptcha.reset(recaptchaWidgetId);
+    }
   }catch(err){}
 }
 
@@ -1822,7 +2179,11 @@ demoForm.addEventListener("submit", function(e){
 
   var token = captchaToken();
   if(!token){
-    showFormError("Please complete the reCAPTCHA verification.");
+    loadCaptcha().then(function(){
+      if(!captchaToken()) showFormError("Please complete the reCAPTCHA verification.");
+    }).catch(function(){
+      showFormError("Verification did not load. Please refresh and try again.");
+    });
     return;
   }
 
