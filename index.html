@@ -338,32 +338,49 @@ h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.85r
 .why-card p{color:var(--text-2);font-size:.9rem}
 
 /* ---------- security ---------- */
-.badges{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:54px}
-.badge{border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:26px 22px 24px;text-align:left;background:rgba(255,255,255,.035);display:flex;flex-direction:column;min-height:100%}
-.cert-seal{width:72px;height:72px;border-radius:50%;border:1.5px solid currentColor;box-shadow:inset 0 0 0 5px rgba(255,255,255,.08);display:grid;place-content:center;text-align:center;line-height:1.05;margin-bottom:16px;color:#5FD4E2;flex:none}
-.badge-iso .cert-seal{color:#E0C07A;box-shadow:inset 0 0 0 5px rgba(224,192,122,.14)}
-.badge-soc .cert-seal{color:#7CA0FF;box-shadow:inset 0 0 0 5px rgba(124,160,255,.14)}
-.badge-dpdp .cert-seal{color:#5FD4E2;box-shadow:inset 0 0 0 5px rgba(95,212,226,.14)}
-.badge-gdpr .cert-seal{color:#B9C4DA;box-shadow:inset 0 0 0 5px rgba(185,196,218,.12)}
-.cert-seal i{font-style:normal;font-family:var(--mono);font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;display:block}
-.cert-seal b{font-family:var(--display);font-weight:700;font-size:.92rem;color:#fff;display:block;letter-spacing:.04em;margin:3px 0}
-.badge b.cert-name{font-family:var(--display);font-weight:700;font-size:1.02rem;color:#fff;display:block;line-height:1.3}
-.badge em{font-style:normal;font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:#E0C07A;display:block;margin:6px 0 10px}
-.badge-soc em{color:#7CA0FF}
-.badge-dpdp em{color:#5FD4E2}
-.badge-gdpr em{color:#9AA7BE}
-.badge p{font-size:.82rem;line-height:1.55;color:#A3B0C9;margin:0}
-.sec-arch{margin-top:48px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:rgba(7,12,24,.45);padding:8px 32px 4px}
-.sec-arch-h{font-family:var(--display);font-weight:700;font-size:1.12rem;color:#fff;padding:22px 0 6px}
-.sec-arch-h span{color:#5FD4E2}
-.sec-arch-sub{font-size:.86rem;color:#8DA0C4;padding-bottom:10px}
-.sec-row{display:grid;grid-template-columns:.85fr 1.35fr;gap:28px;padding:18px 0;border-top:1px solid rgba(255,255,255,.08)}
+.sec-band{position:relative;isolation:isolate;overflow:hidden;background:#05070d;color:var(--inv-1)}
+.sec-band.section.dark{background:#05070d}
+.sec-band::after{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;z-index:1;pointer-events:none;background:var(--thread)}
+.sec-rules{position:absolute;inset:0;z-index:0;pointer-events:none;background-image:repeating-linear-gradient(to bottom,transparent 0 47px,rgba(210,225,255,.05) 47px 48px),repeating-linear-gradient(to right,transparent 0 119px,rgba(210,225,255,.025) 119px 120px);mask-image:radial-gradient(ellipse 80% 70% at 50% 40%,#000 18%,transparent 78%);-webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 40%,#000 18%,transparent 78%)}
+.sec-watermark{position:absolute;right:-1%;top:6%;z-index:0;margin:0;font-family:var(--display);font-weight:800;font-size:clamp(5rem,14vw,11rem);line-height:.8;letter-spacing:-.08em;color:rgba(237,242,251,.032);pointer-events:none;user-select:none}
+.sec-band .container{position:relative;z-index:1}
+.sec-head{max-width:40rem;margin-bottom:44px}
+.sec-head h2{margin-bottom:14px;text-wrap:wrap}
+.sec-head .grad{color:#9EB4D6;font-weight:700}
+.trust{border:1px solid rgba(210,225,255,.12);border-radius:18px;background:linear-gradient(180deg,#0c121c,#070b12);box-shadow:0 1px 0 rgba(255,255,255,.05) inset,0 40px 80px -48px rgba(0,0,0,.85);overflow:hidden}
+.trust-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;align-items:center;padding:13px 22px;border-bottom:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.02)}
+.trust-brand{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#8FA3C2}
+.trust-dots{display:flex;gap:6px}
+.trust-dots i{width:8px;height:8px;border-radius:50%}
+.trust-dots .r{background:#FF5F57}.trust-dots .y{background:#FEBB2E}.trust-dots .g{background:#28C840}
+.trust-live{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#6EE7B7}
+.trust-split{display:grid;grid-template-columns:1.05fr .95fr}
+.trust-iso{padding:28px 26px 24px;border-right:1px solid rgba(255,255,255,.07);background:rgba(224,192,122,.04)}
+.trust-k{font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#E0C07A;margin:0 0 12px}
+.trust-num{font-family:var(--mono);font-weight:500;font-size:clamp(1.6rem,3.2vw,2.35rem);letter-spacing:.08em;color:#F4E6C0;line-height:1;margin:0 0 14px}
+.trust-iso h3{font-family:var(--display);font-weight:700;font-size:1.35rem;color:#fff;letter-spacing:-.02em;margin:0 0 6px}
+.trust-iso em{font-style:normal;font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:#E0C07A;display:block;margin-bottom:12px}
+.trust-iso p{font-size:.9rem;line-height:1.6;color:#C3CDE0;margin:0;max-width:42ch}
+.trust-list{padding:8px 0}
+.trust-item{display:grid;grid-template-columns:92px 1fr;gap:12px 16px;padding:18px 24px;border-bottom:1px solid rgba(255,255,255,.07)}
+.trust-item:last-child{border-bottom:0}
+.trust-item strong{font-family:var(--display);font-weight:700;font-size:.98rem;color:#F4F7FC;display:block;letter-spacing:-.015em}
+.trust-item small{display:block;margin-top:5px;font-size:.8rem;line-height:1.5;color:#9AA7BE}
+.trust-st{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;align-self:start;padding-top:4px}
+.trust-item.is-soc .trust-st{color:#7CA0FF}
+.trust-item.is-dpdp .trust-st{color:#5FD4E2}
+.trust-item.is-gdpr .trust-st{color:#9AA7BE}
+.sec-arch{margin-top:28px;border:1px solid rgba(210,225,255,.12);border-radius:18px;background:linear-gradient(180deg,#0c121c,#070b12);padding:8px 28px 10px;overflow:hidden}
+.sec-arch-h{font-family:var(--display);font-weight:700;font-size:1.18rem;color:#fff;padding:20px 0 4px}
+.sec-arch-h span{color:var(--cyan)}
+.sec-arch-sub{font-size:.86rem;color:#8DA0C4;padding-bottom:8px}
+.sec-row{display:grid;grid-template-columns:52px .85fr 1.35fr;gap:16px 22px;padding:16px 0;border-top:1px solid rgba(255,255,255,.08);align-items:start}
+.sec-id{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;color:#5C6A85;padding-top:5px}
 .sec-row strong{font-family:var(--display);font-weight:600;font-size:.95rem;color:#EDF2FB;display:block;line-height:1.4}
 .sec-row p{font-size:.88rem;color:#93A2BE;line-height:1.6;margin:0}
-.controls{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:34px}
-.control-chip{font-size:.82rem;font-weight:500;color:#C4CFE4;border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.04);padding:8px 16px;border-radius:999px}
-.sec-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 22px;margin-top:36px;text-align:center}
-.sec-foot .footnote{margin:0}
+.sec-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 22px;margin-top:28px}
+.sec-foot .footnote{margin:0;color:#6E7C97}
+.sec-foot .footnote a{color:var(--cyan);font-weight:600}
 
 /* ---------- clients ---------- */
 .logo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:920px;margin:0 auto}
@@ -615,7 +632,9 @@ html.is-paused .dlive i{animation-play-state:paused}
   .eco-split{grid-template-columns:1fr}
   .eco-finance{grid-template-columns:1fr;text-align:left}
   .eco-fin-tags{justify-content:flex-start}
-  .badges{grid-template-columns:repeat(2,1fr)}
+  .trust-split{grid-template-columns:1fr}
+  .trust-iso{border-right:0;border-bottom:1px solid rgba(255,255,255,.07)}
+  .sec-watermark{display:none}
   .logo-grid{grid-template-columns:repeat(3,1fr)}
   .panel{grid-template-columns:1fr;gap:38px}
   .prod-side{position:static}
@@ -675,9 +694,14 @@ html.is-paused .dlive i{animation-play-state:paused}
   .tabs{width:100%;justify-content:space-between}
   .tab{padding:10px 14px;font-size:.82rem;flex:1}
   .eco-panel{padding:22px 16px 18px}
-  .badges{grid-template-columns:1fr}
-  .sec-arch{padding:8px 18px 4px}
-  .sec-row{grid-template-columns:1fr;gap:6px;padding:16px 0}
+  .sec-head h2{font-size:1.62rem;line-height:1.2}
+  .trust-live{display:none}
+  .trust-head,.trust-iso,.trust-item{padding-left:16px;padding-right:16px}
+  .trust-item{grid-template-columns:1fr;gap:6px}
+  .sec-arch{padding:8px 16px 10px}
+  .sec-row{grid-template-columns:52px 1fr;gap:8px 14px;padding:16px 0}
+  .sec-row p{grid-column:2}
+  .sec-foot{flex-direction:column;align-items:flex-start}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
@@ -1588,74 +1612,87 @@ html.is-paused .dlive i{animation-play-state:paused}
 </section>
 
 <!-- ================= SECURITY ================= -->
-<section class="section dark" id="security">
+<section class="section dark sec-band" id="security">
+  <div class="sec-rules" aria-hidden="true"></div>
+  <p class="sec-watermark" aria-hidden="true">ISMS</p>
   <div class="container">
-    <div class="center reveal">
-      <span class="kicker">Security, Compliance &amp; Trust</span>
-      <h2>Your auditors will ask. Here are the answers.</h2>
+    <header class="sec-head reveal">
+      <span class="kicker">Security</span>
+      <h2>Your auditors will ask.<br/><span class="grad">Here are the answers.</span></h2>
       <p class="lead">HISYNC runs payroll, asset and procurement data for Indian enterprises — on a dedicated instance per customer. This section is written for the people who have to sign off on that.</p>
-    </div>
-    <div class="badges">
-      <div class="badge badge-iso reveal">
-        <span class="cert-seal" aria-hidden="true"><i>ISO 27001</i><b>2022</b><i>Certified</i></span>
-        <b class="cert-name">ISO 27001:2022</b>
-        <em>Certified ISMS</em>
-        <p>Certified by Ranalysis Certification Pvt. Ltd. (EGAC-accredited). Certificate 4DAFE675, valid to 14 May 2029.</p>
+    </header>
+
+    <div class="trust reveal">
+      <div class="trust-head">
+        <span class="trust-brand"><span class="trust-dots" aria-hidden="true"><i class="r"></i><i class="y"></i><i class="g"></i></span> HISYNC · Trust register</span>
+        <span class="trust-live">One certificate on this page</span>
       </div>
-      <div class="badge badge-soc reveal">
-        <span class="cert-seal" aria-hidden="true"><i>SOC 1 + 2</i><b>2026</b><i>Assessed</i></span>
-        <b class="cert-name">SOC 1 &amp; SOC 2</b>
-        <em>Framework assessed</em>
-        <p>Control-framework assessments by UK Certification &amp; Inspection Ltd (2026) — not a CPA attestation. A CPA-firm SOC 2 program is underway.</p>
-      </div>
-      <div class="badge badge-dpdp reveal">
-        <span class="cert-seal" aria-hidden="true"><i>DPDP</i><b>2023</b><i>Built-in</i></span>
-        <b class="cert-name">DPDP Act 2023</b>
-        <em>Privacy in the product</em>
-        <p>PAN, Aadhaar, UAN and bank details encrypted at rest. Every decryption is logged. Data-subject requests and breach workflows ship in the product.</p>
-      </div>
-      <div class="badge badge-gdpr reveal">
-        <span class="cert-seal" aria-hidden="true"><i>GDPR</i><b>EU</b><i>Aligned</i></span>
-        <b class="cert-name">GDPR</b>
-        <em>Aligned, not a seal</em>
-        <p>Where EU personal data is processed, access, correction and erasure rights apply. This is alignment with the regulation — not a third-party GDPR certificate.</p>
+      <div class="trust-split">
+        <article class="trust-iso">
+          <p class="trust-k">Third-party ISMS certificate</p>
+          <p class="trust-num">4DAFE675</p>
+          <h3>ISO 27001:2022</h3>
+          <em>Certified</em>
+          <p>Certified by Ranalysis Certification Pvt. Ltd. (EGAC-accredited). Valid to 14 May 2029. Certificate available on request.</p>
+        </article>
+        <div class="trust-list">
+          <div class="trust-item is-soc">
+            <span class="trust-st">Assessed</span>
+            <div>
+              <strong>SOC 1 &amp; SOC 2</strong>
+              <small>Control-framework assessments by UK Certification &amp; Inspection Ltd (2026) — not a CPA attestation. A CPA-firm SOC 2 program is underway.</small>
+            </div>
+          </div>
+          <div class="trust-item is-dpdp">
+            <span class="trust-st">In product</span>
+            <div>
+              <strong>DPDP Act 2023</strong>
+              <small>PAN, Aadhaar, UAN and bank details encrypted at rest. Every decryption is logged. Data-subject requests and breach workflows ship in the product — this is not a DPDP certificate.</small>
+            </div>
+          </div>
+          <div class="trust-item is-gdpr">
+            <span class="trust-st">Aligned</span>
+            <div>
+              <strong>GDPR</strong>
+              <small>Where EU personal data is processed, access, correction and erasure rights apply. Alignment with the regulation — not a third-party GDPR seal.</small>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="sec-arch reveal">
       <p class="sec-arch-h">One customer, <span>one instance.</span></p>
-      <p class="sec-arch-sub">The controls below are product behaviour, not a policy PDF.</p>
+      <p class="sec-arch-sub">Product behaviour — not a policy PDF.</p>
       <div class="sec-row">
+        <span class="sec-id">01</span>
         <strong>Dedicated single-tenant deployment</strong>
         <p>Each customer runs an isolated application with its own database and domain. No shared schema, no pooled tenancy, no cross-customer query path.</p>
       </div>
       <div class="sec-row">
+        <span class="sec-id">02</span>
         <strong>Encryption where it matters</strong>
         <p>PAN, Aadhaar, UAN and bank details are encrypted at rest with blind-index lookup, hidden from default API output, and every decryption is logged.</p>
       </div>
       <div class="sec-row">
+        <span class="sec-id">03</span>
         <strong>Tamper-evident by design</strong>
         <p>Approvals write to a SHA-256 hash chain. Depreciation ledgers are HMAC-signed. Tampering is detectable, not just discouraged.</p>
       </div>
       <div class="sec-row">
+        <span class="sec-id">04</span>
         <strong>Segregation of duties, enforced</strong>
         <p>Payroll maker, checker and disburser are separate roles. A database constraint blocks self-approval. Break-glass overrides need a second officer and expire on a timer.</p>
       </div>
       <div class="sec-row">
+        <span class="sec-id">05</span>
         <strong>Access control &amp; SSO</strong>
         <p>Role-based access across permission modules, field-level security, and SSO via Microsoft Entra ID and Google (OAuth/OIDC) with directory sync.</p>
       </div>
     </div>
 
-    <div class="controls reveal">
-      <span class="control-chip">Enterprise Audit Logs</span>
-      <span class="control-chip">Role-Based Access</span>
-      <span class="control-chip">Enterprise Approval Controls</span>
-      <span class="control-chip">Maker-Checker Enablement</span>
-      <span class="control-chip">Controlled Operational Workflows</span>
-    </div>
     <div class="sec-foot">
-      <p class="footnote">ISO certificate 4DAFE675 available on request. Security questionnaires: <a href="mailto:info@hisync.in" style="color:#5FD4E2">info@hisync.in</a></p>
+      <p class="footnote">ISO certificate 4DAFE675 available on request. Security questionnaires: <a href="mailto:info@hisync.in">info@hisync.in</a></p>
       <a class="btn btn-ghost btn-sm" href="#demo">Bring your questionnaire to a demo</a>
     </div>
   </div>
